@@ -1,0 +1,6 @@
+framework module SDLiveProject {
+  umbrella header "SDLiveProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
