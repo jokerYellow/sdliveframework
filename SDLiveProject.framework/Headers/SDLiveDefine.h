@@ -14,6 +14,18 @@
     #define NSLog(...) (void)0
 #endif
 
+
+/**
+ 图片加载状态
+
+ - SDLiveImageLoadStatusFailed: 加载失败
+ - SDLiveImageLoadStatusNormal: 加载恢复正常
+ */
+typedef NS_ENUM(NSInteger, SDLiveImageLoadStatus){
+    SDLiveImageLoadStatusFailed,
+    SDLiveImageLoadStatusNormal,
+};
+
 typedef NS_ENUM(NSInteger, SDLiveConfig){
     SDLiveConfigDevelop,
     SDLiveConfigQA,
@@ -245,12 +257,6 @@ extern NSString* sdlive_sdk_version;
 
 typedef double SDLiveNumber;
 
-typedef NS_ENUM(NSUInteger, SDLiveBlockType) {
-    SDLiveBlockVideoType = 1,
-    SDLiveBlockImageType = 2,
-    SDLiveBlockStreamTimeOut = 3,
-};
-
 typedef NS_ENUM(NSInteger, SDLiveClientType){
     SDLiveClientAndroidType = 1,
     SDLiveClientIOSType = 2,
@@ -260,8 +266,7 @@ typedef NS_ENUM(NSInteger, SDLiveClientType){
     SDLiveClientPushType = 6,
     SDLiveClientVerticalScreenType = 7,
 };
-
-
+ 
 typedef NS_ENUM(NSInteger, SDLiveUserRoleType){
     SDLiveUserRoleStudent = 1,
     SDLiveUserRoleTeacher = 2,

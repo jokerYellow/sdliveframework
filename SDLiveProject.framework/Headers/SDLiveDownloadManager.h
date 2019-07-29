@@ -68,7 +68,7 @@ typedef enum : NSUInteger {
                complete:(NSError *_Nullable)error;
 
 - (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
-          didDeleteItem: (SDLiveDownloadItem *)item
+          didDeleteItem: (SDLiveDownloadItem * _Nonnull)item
                complete: (NSError *_Nullable)error;
 
 @end

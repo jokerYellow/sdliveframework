@@ -10,12 +10,7 @@
 
 @class SDLiveRecorder;
 @class SDLiveRecordModel;
-
-@protocol SDLivePlayerViewRecorder
-
--(void)recordType:(SDLiveBlockType)type url:(NSString*)url duration:(NSInteger)duration message:(NSString*)message tcpSpd:(NSString*)speed;
-
-@end
+@protocol SDLivePlayerViewRecorder;
 
 typedef void(^SDLivePlayerCompleteBlock)(NSError* error);
 
@@ -28,11 +23,10 @@ typedef void(^SDLivePlayerLoadStatusCallBlock)(SDLiveMovieLoadState);
 
 @interface SDLivePlayerView : UIView
 
-@property (nonatomic, assign, readonly) NSTimeInterval vCache;
-@property (nonatomic, assign, readonly) NSString* tcpSpeed;
+@property (nonatomic, assign, readonly) NSTimeInterval vCache; 
 @property (nonatomic, assign, readonly) NSTimeInterval currentPlayTime;
 @property (nonatomic, assign, readonly) NSTimeInterval playableDuration;
-
+@property (nonatomic, copy,   readonly) NSString* tcpSpeed;
 @property (nonatomic, assign) Boolean isFirstLaunch;
 /**
  埋点记录

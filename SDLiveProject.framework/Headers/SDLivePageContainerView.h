@@ -7,11 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class SDLiveScrollModel;
-@class SDLivePageView;
 @protocol SDLivePageViewDelegate;
 
+@class SDLiveScrollModel;
+@class SDLivePageView;
+
 @interface SDLivePageContainerView : UIView<SDLivePageViewDelegate>
+
 -(void)scroll:(SDLiveScrollModel*)model;
+
 -(void)addPageView:(SDLivePageView*)pageView;
+
 @end
