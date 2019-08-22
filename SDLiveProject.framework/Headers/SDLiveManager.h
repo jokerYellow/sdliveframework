@@ -141,6 +141,8 @@ didChangeStreamUrl:(UrlSteamType)type;
  加载恢复正常的时候，业务方可以隐藏重试按钮
 
  @param status SDLiveImageLoadStatus
+                - SDLiveImageLoadStatusFailed: 加载失败
+                - SDLiveImageLoadStatusNormal: 加载恢复正常
  */
 -(void)manager:(SDLiveManager* _Nonnull)manager
     didChangeImageStatus:(SDLiveImageLoadStatus)status;
@@ -326,6 +328,27 @@ didChangeStreamUrl:(UrlSteamType)type;
                              andLiveId:(NSString* _Nonnull)liveId
                            channelCode:(NSString* _Nonnull)channelCode
                                   type:(SDVideoType)type;
+
+
+/**
+ 碎片化视频初始化
+
+ @param token token
+ @param liveId liveID的
+ @param channelCode 渠道码
+ @param videoId 短视频ID
+ @param extraJson 短视频扩展Json
+ @param startSequence 短视频开始sequence
+ @param endSequence 短视频结束sequence
+ @return SDLiveManager
+ */
+- (instancetype _Nonnull)initWithToken:(NSString* _Nonnull)token
+                             andLiveId:(NSString* _Nonnull)liveId
+                           channelCode:(NSString* _Nonnull)channelCode
+                               videoId:(SDLiveNumber)videoId
+                             extraJson:(NSString* _Nonnull)extraJson
+                         startSequence:(SDLiveNumber)startSequence
+                           endSequence:(SDLiveNumber)endSequence;
 
 
 /**
