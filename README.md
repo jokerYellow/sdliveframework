@@ -5,8 +5,16 @@ SDLiveProject 是尚直播的 iOS 端 SDK ，包含直播、点播功能，集�
 
 ## 2.安装
 在 `Podfile` 添加
+* 持续获取最新版本
+
 ```ruby
-pod 'SDLiveProject',:git=>'https://github.com/jokerYellow/sdliveframework.git',:branch=>'master'
+pod 'SDLiveProject',:git=>'http://172.16.117.224/iosenterprise/SDLiveProject.git'
+```
+
+* 当前稳定版本1.0.8
+
+```ruby
+pod 'SDLiveProject',:git=>'http://172.16.117.224/iosenterprise/SDLiveProject.git',:tag=>'1.0.8'
 ```
 
 > **如果主工程有引入欢拓**，请在安装尚直播之后测试欢拓功能是否正常，有问题请联系[尚直播技术人员 huangyaqing@sunlands.com](huangyaqing@sunlands.com)
@@ -149,7 +157,7 @@ cacheVideoDuration:(NSTimeInterval)cachedDuration;
         onError:(NSError*)error;
 ```
 
-### - 重要的弹幕代理回调方法`SDLiveIMDelegate`
+### - 主要的弹幕代理回调方法`SDLiveIMDelegate`
 ```objective-c
 /**
  收到服务端发来的新消息
