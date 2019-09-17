@@ -213,3 +213,148 @@ cacheVideoDuration:(NSTimeInterval)cachedDuration;
 - (void)didChatRoomDidUserBeKickOff:(Boolean)status;
 ```
 
+
+
+### - 高级功能
+#### 离线播放
+离线播放，SDLiveDownloadManager 类新增平台化下载方法
+
+```
+/**
+ 平台化下载
+
+ @param item SDLiveDownloadItem，liveId 建议传入 roomId
+ @param model SDLiveLoginInfoModel
+ */
+- (void)downloadItem:(SDLiveDownloadItem *)item withPlatInfo:(SDLiveLoginInfoModel *)model;
+```
+离线播放代理
+
+```
+/**
+ 下载代理
+ */
+@protocol SDLiveDownloadManagerDelegate <NSObject>
+
+
+/**
+ 离线下载认证失败
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ @param error NSError
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   item:(SDLiveDownloadItem *_Nonnull)item
+    authorizationFailed:(NSError *_Nullable)error;
+
+
+/**
+ 离线下载开始下载
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+      beginDownloadItem:(SDLiveDownloadItem *_Nonnull)item;
+
+
+/**
+ 离线下载状态变化
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ @param status SDLiveDownloadStatus
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   item:(SDLiveDownloadItem *_Nonnull)item
+           StatusChange:(SDLiveDownloadStatus)status;
+
+
+/**
+ 离线下载进度变化
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ @param downloadSize NSInteger 已下载大小
+ @param totalSize NSInteger 总大小
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   item:(SDLiveDownloadItem *_Nonnull)item
+         progressChange:(NSInteger)downloadSize
+              totalSize:(NSInteger)totalSize;
+
+
+/**
+ 下载出错
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ @param error NSError
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   item:(SDLiveDownloadItem *_Nonnull)item
+          errorOccurred:(NSError *_Nullable)error;
+
+
+/**
+ 下载完成
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ @param error NSError
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   item:(SDLiveDownloadItem *_Nonnull)item
+               complete:(NSError *_Nullable)error;
+
+
+/**
+ 删除完成
+
+ @param manager SDLiveDownloadManager
+ @param item SDLiveDownloadItem
+ @param error NSError
+ */
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+          didDeleteItem: (SDLiveDownloadItem * _Nonnull)item
+               complete: (NSError *_Nullable)error;
+
+@end
+```
+
+#### 获取音频文件链接
+SDLiveAudioService 类提供音频下载方法
+   
+```
+/**
+ 平台化音频下载
+
+ @param model SDLiveLoginInfoModel 平台化参数
+ @param complete 返回（downloadUrl，fileSize，error）
+ @return 操作成功或失败
+ */
+
+- (BOOL)requestAudioInfomationWithPlatInfo:(SDLiveLoginInfoModel *)model
+                                  complete:(SDLiveAudioServiceBlock)complete;
+```
+
+#### 平台化碎片化初始化方式
+
+```
+/**
+ 平台化业务方碎片化视频初始化
+ @param model SDLiveLoginInfoModel
+ @param videoId 短视频ID
+ @param extraJson 短视频扩展Json
+ @param startSequence 短视频开始sequence
+ @param endSequence 短视频结束sequence
+ @return SDLiveManager
+ */
+- (instancetype _Nonnull)initLiveWith:(SDLiveLoginInfoModel* _Nonnull)model
+                              videoId:(SDLiveNumber)videoId
+                            extraJson:(NSString* _Nonnull)extraJson
+                        startSequence:(SDLiveNumber)startSequence
+                          endSequence:(SDLiveNumber)endSequence;
+```
+
