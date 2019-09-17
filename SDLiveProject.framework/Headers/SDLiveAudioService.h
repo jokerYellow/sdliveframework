@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class SDLiveLoginInfoModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,7 +26,21 @@ typedef void(^SDLiveAudioServiceBlock)( NSString* _Nullable downloadUrl,NSIntege
  @param channelCode 频道码
  @param complete 返回（downloadUrl，fileSize，error）
  */
-- (void)requestAudioInfomationWithToken:(NSString*)token andLiveId:(NSString*)liveId channelCode:(NSString*)channelCode complete:(SDLiveAudioServiceBlock)complete;
+- (BOOL)requestAudioInfomationWithToken:(NSString*)token
+                              andLiveId:(NSString*)liveId
+                            channelCode:(NSString*)channelCode
+                               complete:(SDLiveAudioServiceBlock)complete;
+
+/**
+ 平台化处理
+
+ @param model SDLiveLoginInfoModel 平台化参数
+ @param complete 返回（downloadUrl，fileSize，error）
+ @return 操作成功或失败
+ */
+
+- (BOOL)requestAudioInfomationWithPlatInfo:(SDLiveLoginInfoModel *)model
+                                  complete:(SDLiveAudioServiceBlock)complete;
 @end
 
 NS_ASSUME_NONNULL_END

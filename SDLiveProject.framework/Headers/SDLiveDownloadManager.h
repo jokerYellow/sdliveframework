@@ -9,7 +9,7 @@
 
 @class SDLiveDownloadManager;
 @class SDLiveDownloadItem;
-
+@class SDLiveLoginInfoModel;
 
 /**
  下载状态
@@ -82,7 +82,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shared;
 
 /*下载Item*/
-- (void)downloadItem:(SDLiveDownloadItem *)item withToken: (NSString *)token andChannelCode:(NSString*)channelCode;
+- (void)downloadItem:(SDLiveDownloadItem *)item
+           withToken: (NSString *_Nullable)token
+      andChannelCode:(NSString*_Nullable)channelCode;
+
+/*平台化下载Item*/
+- (void)downloadItem:(SDLiveDownloadItem *)item withPlatInfo:(SDLiveLoginInfoModel *)model;
 
 /*暂停某个下载*/
 - (void)pauseItem:(SDLiveDownloadItem *)item;

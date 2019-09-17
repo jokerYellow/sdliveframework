@@ -360,7 +360,20 @@ didChangeStreamUrl:(UrlSteamType)type;
 - (instancetype _Nonnull)initLiveWith:(SDLiveLoginInfoModel*_Nonnull )model
                                  type:(SDVideoType)type;
 
-
+/**
+ 平台化业务方碎片化视频初始化
+ @param model SDLiveLoginInfoModel
+ @param videoId 短视频ID
+ @param extraJson 短视频扩展Json
+ @param startSequence 短视频开始sequence
+ @param endSequence 短视频结束sequence
+ @return SDLiveManager
+ */
+- (instancetype _Nonnull)initLiveWith:(SDLiveLoginInfoModel* _Nonnull)model
+                              videoId:(SDLiveNumber)videoId
+                            extraJson:(NSString* _Nonnull)extraJson
+                        startSequence:(SDLiveNumber)startSequence
+                          endSequence:(SDLiveNumber)endSequence;
 #pragma mark 播放器控制方法
 
 /**

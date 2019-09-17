@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SDLiveFramework'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.summary          = 'A short description of SDLiveProject.'
 
 # This description is used to generate tags and improve search results.
