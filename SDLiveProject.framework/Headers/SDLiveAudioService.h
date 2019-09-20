@@ -32,7 +32,7 @@ typedef void(^SDLiveAudioServiceBlock)( NSString* _Nullable downloadUrl,NSIntege
                                complete:(SDLiveAudioServiceBlock)complete;
 
 /**
- 平台化处理
+ 下载平台化音频文件
 
  @param model SDLiveLoginInfoModel 平台化参数
  @param complete 返回（downloadUrl，fileSize，error）
