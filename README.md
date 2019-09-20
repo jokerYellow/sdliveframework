@@ -11,10 +11,10 @@ SDLiveProject 是尚直播的 iOS 端 SDK ，包含直播、点播功能，集�
 pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git'
 ```
 
-* 平台化版本1.0.9
+* 平台化版本1.0.9.1【20190920更新】
 
 ```ruby
-pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9'
+pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.1'
 ```
 
 * 当前稳定版本1.0.8
@@ -164,6 +164,28 @@ cacheVideoDuration:(NSTimeInterval)cachedDuration;
 ```
 
 ### - 主要的弹幕代理回调方法`SDLiveIMDelegate`
+
+``` 
+ IM 错误码，登录以及发送消息代理返回的 result 变量
+ 0 : 服务器返回正确；
+ 1 : 数据库错误；
+ 2 : 入参错误；
+ 3 : 直播间不存在；
+ 4 : json解析错误；
+ 5 : 直播间不存在改成员；
+ 6 : 直播间禁言；
+ 7 : 敏感词屏蔽；
+ 8 : 非注册用户；
+ 9 : 用户无操作权限；
+ 10 : 直播间满员；
+ 11: 直播间用户被单独禁言
+ 12： 学生已经被踢出直播间
+ 13：消息超过长度限制(140汉字)。
+ 14： 发送消息频率超过最大频率
+ 15： 第三方签名校验错误
+ 16： 第三方合作方id不存在 
+```
+
 ```objective-c
 /**
  收到服务端发来的新消息
@@ -178,16 +200,22 @@ cacheVideoDuration:(NSTimeInterval)cachedDuration;
  当app长链接断开重连的时候，也会调用该方法，所以需要注意登录返回的消息会重复。
  
  @param model SDLiveIMChatRoomModel
+ 
+ @param result 错误码
  */
--(void)didLogin:(SDLiveIMChatRoomModel*)model
-    MessageList:(NSArray<SDLiveIMMessageModel*>*)messages;
+-(void)didLogin:(SDLiveIMChatRoomModel* _Nonnull)model
+    MessageList:(NSArray<SDLiveIMMessageModel*>* _Nullable)messages
+     withResult:(NSInteger)result;
 
 /**
  消息发送成功，返回发送成功的消息
 
  @param message 聊天消息数据
+ 
+ @param result 错误码
  */
--(void)didSendMessage:(SDLiveIMMessageModel*)message;
+-(void)didSendMessage:(SDLiveIMMessageModel* _Nonnull)message
+           withResult:(NSInteger)result;
 
 /**
  用户批量下线通知，聊天人数变更
