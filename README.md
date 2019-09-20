@@ -11,6 +11,12 @@ SDLiveProject 是尚直播的 iOS 端 SDK ，包含直播、点播功能，集�
 pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git'
 ```
 
+* 平台化版本1.0.9
+
+```ruby
+pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9'
+```
+
 * 当前稳定版本1.0.8
 
 ```ruby
