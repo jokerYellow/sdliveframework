@@ -1,5 +1,16 @@
-SDLiveProject 是尚直播的 iOS 端 SDK ，包含直播、点播功能，集成方便。
-## 1.准备条件
+# SDLiveProject
+
+SDLiveProject 是尚直播的 iOS 端 SDK ，可以观看尚直播平台的直播以及点播，集成方便。
+
+## 功能
+- [x] 在线观看直播
+- [x] 发送弹幕
+- [x] 在线观看点播
+- [x] 离线观看点播
+- [x] 获取音频文件下载链接
+- [x] 在线观看碎片化视频
+
+## 安装条件
 - iOS7.0 +
 - [CocoaPods](https://cocoapods.org)
 
@@ -11,10 +22,10 @@ SDLiveProject 是尚直播的 iOS 端 SDK ，包含直播、点播功能，集�
 pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git'
 ```
 
-* 平台化版本1.0.9.1【20190920更新】
+* 平台化版本1.0.9.2【20190923更新】
 
 ```ruby
-pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.1'
+pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.2'
 ```
 
 * 当前稳定版本1.0.8
