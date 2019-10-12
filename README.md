@@ -22,10 +22,10 @@ SDLiveProject 是尚直播的 iOS 端 SDK ，可以观看尚直播平台的直�
 pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git'
 ```
 
-* 平台化版本1.0.9.3
+* 平台化版本1.0.9.4
 
 ```ruby
-pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.3'
+pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.4'
 ```
 
 * 当前稳定版本1.0.8
