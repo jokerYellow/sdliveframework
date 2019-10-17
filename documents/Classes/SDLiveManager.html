@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDLiveManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/SDLiveManager" class="dashAnchor"></a>
+    <a title="SDLiveManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDLiveProject 1.0.5 Docs</a> (29% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDLiveProject Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SDLiveManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveAudioService.html">SDLiveAudioService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveError.html">SDLiveError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMAnnounceModel.html">SDLiveIMAnnounceModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMChatRoomEvent.html">SDLiveIMChatRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLog.html">SDLiveLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginModel.html">SDLiveLoginModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginResModel.html">SDLiveLoginResModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveManager.html">SDLiveManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePageContainerView.html">SDLivePageContainerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePaperModel.html">SDLivePaperModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePlayerView.html">SDLivePlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveClientType.html">SDLiveClientType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveConfig.html">SDLiveConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveIMChatRoomEventType.html">SDLiveIMChatRoomEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveImageLoadStatus.html">SDLiveImageLoadStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMovieLoadState.html">SDLiveMovieLoadState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMoviePlaybackState.html">SDLiveMoviePlaybackState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMovieScalingMode.html">SDLiveMovieScalingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomEvent.html">SDLiveRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomPeopleEvent.html">SDLiveRoomPeopleEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomStatus.html">SDLiveRoomStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveServerErrorCode.html">SDLiveServerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveSocketError.html">SDLiveSocketError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveUserRoleType.html">SDLiveUserRoleType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDSocketState.html">SDSocketState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveDownloadManagerDelegate.html">SDLiveDownloadManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveIMDelegate.html">SDLiveIMDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveLogger.html">SDLiveLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveManagerDelegate.html">SDLiveManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLiveAudioService.h@T@SDLiveAudioServiceBlock">SDLiveAudioServiceBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerCompleteBlock">SDLivePlayerCompleteBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerErrorBlock">SDLivePlayerErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerLoadStatusCallBlock">SDLivePlayerLoadStatusCallBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerStatusCallBlock">SDLivePlayerStatusCallBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDLiveLogEventDebug">SDLiveLogEventDebug</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDLiveManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDLiveManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>尚直播管理类
+提供初始化SDK方法
+提供课件视图、播放器视图供业务方布局
+提供发送弹幕、控制播放器等方法</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)chatRoomModel"></a>
+                    <a name="//apple_ref/objc/Property/chatRoomModel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)chatRoomModel">chatRoomModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>获取当前的聊天室的信息，在登录进聊天室之后才会有值</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a></span> <span class="o">*</span><span class="n">chatRoomModel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">chatRoomModel</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)roomInfo"></a>
+                    <a name="//apple_ref/objc/Property/roomInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)roomInfo">roomInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>获取当前的直播间的信息，在登录进直播间之后才会有值</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a></span> <span class="o">*</span><span class="n">roomInfo</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">roomInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)delegate"></a>
+                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>直播间回调代理，包括播放器状态、报错、随堂考等事件</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDLiveManagerDelegate.html">SDLiveManagerDelegate</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSObjectProtocol</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols/SDLiveManagerDelegate.html">SDLiveManagerDelegate</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)imDelegate"></a>
+                    <a name="//apple_ref/objc/Property/imDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)imDelegate">imDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IM回调代理，包括收到新消息、用户被踢、禁言等事件</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDLiveIMDelegate.html">SDLiveIMDelegate</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">imDelegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">imDelegate</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSObjectProtocol</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols/SDLiveIMDelegate.html">SDLiveIMDelegate</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)pageView"></a>
+                    <a name="//apple_ref/objc/Property/pageView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)pageView">pageView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>课件视图，建议仅用作布局，不要调用其方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLivePageContainerView.html">SDLivePageContainerView</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">pageView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pageView</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLivePageContainerView.html">SDLivePageContainerView</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)playerView"></a>
+                    <a name="//apple_ref/objc/Property/playerView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)playerView">playerView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>播放视图，建议仅用做布局，不要调用其方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLivePlayerView.html">SDLivePlayerView</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">playerView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">playerView</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLivePlayerView.html">SDLivePlayerView</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)pageViewPlaceHolderImage"></a>
+                    <a name="//apple_ref/objc/Property/pageViewPlaceHolderImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)pageViewPlaceHolderImage">pageViewPlaceHolderImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>课件区域的占位图，当课件图片在加载中的时候展示该图片
+默认有占位图</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIImage</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">pageViewPlaceHolderImage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pageViewPlaceHolderImage</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)tcpSpeed"></a>
+                    <a name="//apple_ref/objc/Property/tcpSpeed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)tcpSpeed">tcpSpeed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">_Nullable</span> <span class="n">tcpSpeed</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tcpSpeed</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)streamType"></a>
+                    <a name="//apple_ref/objc/Property/streamType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)streamType">streamType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UrlSteamType 分为 老师摄像头 共享桌面 共享视频
+当前播放的视频的类型，默认老师摄像头</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a></span> <span class="n">streamType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">streamType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)initWithToken:andInviteCode:channelCode:type:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithToken:andInviteCode:channelCode:type:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)initWithToken:andInviteCode:channelCode:type:">-initWithToken:andInviteCode:channelCode:type:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>初始化方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">token</span>
+                         <span class="nf">andInviteCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">code</span>
+                           <span class="nf">channelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">channelCode</span>
+                                  <span class="nf">type</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">andInviteCode</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>IMtoken</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>邀请码</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SDLiveManager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)initWithToken:andLiveId:channelCode:type:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithToken:andLiveId:channelCode:type:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)initWithToken:andLiveId:channelCode:type:">-initWithToken:andLiveId:channelCode:type:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>初始化方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">token</span>
+                             <span class="nf">andLiveId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">liveId</span>
+                           <span class="nf">channelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">channelCode</span>
+                                  <span class="nf">type</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">andLiveId</span> <span class="nv">liveId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>token</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>liveId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>liveId</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>渠道码</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>登录类型</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SDLiveManager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)initWithToken:andLiveId:channelCode:videoId:extraJson:startSequence:endSequence:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithToken:andLiveId:channelCode:videoId:extraJson:startSequence:endSequence:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)initWithToken:andLiveId:channelCode:videoId:extraJson:startSequence:endSequence:">-initWithToken:andLiveId:channelCode:videoId:extraJson:startSequence:endSequence:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>碎片化视频初始化</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">token</span>
+                             <span class="nf">andLiveId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">liveId</span>
+                           <span class="nf">channelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">channelCode</span>
+                               <span class="nf">videoId</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span><span class="nv">videoId</span>
+                             <span class="nf">extraJson</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">extraJson</span>
+                         <span class="nf">startSequence</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span><span class="nv">startSequence</span>
+                           <span class="nf">endSequence</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span><span class="nv">endSequence</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">andLiveId</span> <span class="nv">liveId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">videoId</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">,</span> <span class="nv">extraJson</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">startSequence</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">,</span> <span class="nv">endSequence</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>token</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>liveId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>liveID的</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>渠道码</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>videoId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extraJson</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频扩展Json</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startSequence</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频开始sequence</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>endSequence</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频结束sequence</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SDLiveManager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)initLiveWith:type:"></a>
+                    <a name="//apple_ref/objc/Method/-initLiveWith:type:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)initLiveWith:type:">-initLiveWith:type:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>平台化业务方客户端启动直播的初始化方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initLiveWith</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">model</span>
+                                 <span class="nf">type</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">liveWith</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>model</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDLiveLoginInfoModel</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SDLiveManager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)initLiveWith:videoId:extraJson:startSequence:endSequence:"></a>
+                    <a name="//apple_ref/objc/Method/-initLiveWith:videoId:extraJson:startSequence:endSequence:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)initLiveWith:videoId:extraJson:startSequence:endSequence:">-initLiveWith:videoId:extraJson:startSequence:endSequence:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>平台化业务方碎片化视频初始化</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initLiveWith</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">model</span>
+                              <span class="nf">videoId</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span><span class="nv">videoId</span>
+                            <span class="nf">extraJson</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">extraJson</span>
+                        <span class="nf">startSequence</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span><span class="nv">startSequence</span>
+                          <span class="nf">endSequence</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span><span class="nv">endSequence</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">liveWith</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span><span class="p">,</span> <span class="nv">videoId</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">,</span> <span class="nv">extraJson</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">startSequence</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">,</span> <span class="nv">endSequence</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>model</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDLiveLoginInfoModel</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>videoId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extraJson</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频扩展Json</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startSequence</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频开始sequence</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>endSequence</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>短视频结束sequence</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SDLiveManager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E6%92%AD%E6%94%BE%E5%99%A8%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"></a>
+                <a name="//apple_ref/objc/Section/播放器控制方法" class="dashAnchor"></a>
+                <a href="#/%E6%92%AD%E6%94%BE%E5%99%A8%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95">
+                  <h3 class="section-name">播放器控制方法</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(py)playSpeed"></a>
+                    <a name="//apple_ref/objc/Property/playSpeed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(py)playSpeed">playSpeed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>播放速度，默认1.0，赋值即可修改播放速度，如2为两倍，1.5为1.5倍播放</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">playSpeed</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">playSpeed</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)play"></a>
+                    <a name="//apple_ref/objc/Method/-play" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)play">-play</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>开始播放</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">play</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">play</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)playWithTime:"></a>
+                    <a name="//apple_ref/objc/Method/-playWithTime:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)playWithTime:">-playWithTime:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>在特定时间开始播放</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playWithTime</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">time</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">play</span><span class="p">(</span><span class="n">withTime</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)pause"></a>
+                    <a name="//apple_ref/objc/Method/-pause" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)pause">-pause</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>暂停播放</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">pause</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pause</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)resume"></a>
+                    <a name="//apple_ref/objc/Method/-resume" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)resume">-resume</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>继续播放</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">resume</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resume</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)stop"></a>
+                    <a name="//apple_ref/objc/Method/-stop" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)stop">-stop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>停止播放，停止之后，无法恢复播放，会释放相关的内存
+一般情况下，在控制器销毁的时候，不用调用该方法
+在SDLiveManager的dealloc方法里，内部会调用该方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stop</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)dragTo:"></a>
+                    <a name="//apple_ref/objc/Method/-dragTo:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)dragTo:">-dragTo:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>拖拽播放，内部会对time做floor(time)处理</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">dragTo</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">time</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drag</span><span class="p">(</span><span class="n">to</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E5%BC%B9%E5%B9%95"></a>
+                <a name="//apple_ref/objc/Section/弹幕" class="dashAnchor"></a>
+                <a href="#/%E5%BC%B9%E5%B9%95">
+                  <h3 class="section-name">弹幕</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)sendMessage:"></a>
+                    <a name="//apple_ref/objc/Method/-sendMessage:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)sendMessage:">-sendMessage:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>发送弹幕消息，发送聊天室消息</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendMessage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文本消息</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)reloadPage"></a>
+                    <a name="//apple_ref/objc/Method/-reloadPage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)reloadPage">-reloadPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>重新加载课件图片，在收到课件加载失败的回调的时候，可以调用该方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">reloadPage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">reloadPage</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(im)reStart"></a>
+                    <a name="//apple_ref/objc/Method/-reStart" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(im)reStart">-reStart</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>重新走一遍登录流程、开始播放视频，当视频出现问题的时候，可以使用该方法</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">reStart</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">reStart</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E7%8E%AF%E5%A2%83"></a>
+                <a name="//apple_ref/objc/Section/环境" class="dashAnchor"></a>
+                <a href="#/%E7%8E%AF%E5%A2%83">
+                  <h3 class="section-name">环境</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveManager(cm)setConfigType:"></a>
+                    <a name="//apple_ref/objc/Method/+setConfigType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveManager(cm)setConfigType:">+setConfigType:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>环境切换，在初始化播放器之前切换环境</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setConfigType</span><span class="p">:(</span><span class="n"><a href="../Enums/SDLiveConfig.html">SDLiveConfig</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">setConfigType</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDLiveConfig.html">SDLiveConfig</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDLiveConfig</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2019@Sunland</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDLiveIMDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/SDLiveIMDelegate" class="dashAnchor"></a>
+    <a title="SDLiveIMDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDLiveProject 1.0.5 Docs</a> (29% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDLiveProject Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SDLiveIMDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveAudioService.html">SDLiveAudioService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveError.html">SDLiveError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMAnnounceModel.html">SDLiveIMAnnounceModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMChatRoomEvent.html">SDLiveIMChatRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLog.html">SDLiveLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginModel.html">SDLiveLoginModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginResModel.html">SDLiveLoginResModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveManager.html">SDLiveManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePageContainerView.html">SDLivePageContainerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePaperModel.html">SDLivePaperModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePlayerView.html">SDLivePlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveClientType.html">SDLiveClientType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveConfig.html">SDLiveConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveIMChatRoomEventType.html">SDLiveIMChatRoomEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveImageLoadStatus.html">SDLiveImageLoadStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMovieLoadState.html">SDLiveMovieLoadState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMoviePlaybackState.html">SDLiveMoviePlaybackState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMovieScalingMode.html">SDLiveMovieScalingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomEvent.html">SDLiveRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomPeopleEvent.html">SDLiveRoomPeopleEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomStatus.html">SDLiveRoomStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveServerErrorCode.html">SDLiveServerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveSocketError.html">SDLiveSocketError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveUserRoleType.html">SDLiveUserRoleType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDSocketState.html">SDSocketState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveDownloadManagerDelegate.html">SDLiveDownloadManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveIMDelegate.html">SDLiveIMDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveLogger.html">SDLiveLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveManagerDelegate.html">SDLiveManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLiveAudioService.h@T@SDLiveAudioServiceBlock">SDLiveAudioServiceBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerCompleteBlock">SDLivePlayerCompleteBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerErrorBlock">SDLivePlayerErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerLoadStatusCallBlock">SDLivePlayerLoadStatusCallBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerStatusCallBlock">SDLivePlayerStatusCallBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDLiveLogEventDebug">SDLiveLogEventDebug</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDLiveIMDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SDLiveIMDelegate</span>
+<span class="cm">/*
+ IM 错误码，对应代理返回的 result 变量
+ 0 : 服务器返回正确；
+ 1 : 数据库错误；
+ 2 : 入参错误；
+ 3 : 直播间不存在；
+ 4 : json解析错误；
+ 5 : 直播间不存在改成员；
+ 6 : 直播间禁言；
+ 7 : 敏感词屏蔽；
+ 8 : 非注册用户；
+ 9 : 用户无操作权限；
+ 10 : 直播间满员；
+ 11: 直播间用户被单独禁言
+ 12： 学生已经被踢出直播间
+ 13：消息超过长度限制(140汉字)。
+ 14： 发送消息频率超过最大频率
+ 15： 第三方签名校验错误
+ 16： 第三方合作方id不存在
+ */</span>
+
+<span class="cm">/**
+ 收到服务端发来的新消息
+ 
+ @param messages 消息列表
+ */</span>
+<span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveMessageList</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="o">*&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">messages</span><span class="p">;</span>
+
+
+<span class="cm">/**
+ 收到服务端发来的公告
+
+ @param announce 公告模型
+ */</span>
+<span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveAnnounce</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMAnnounceModel.html">SDLiveIMAnnounceModel</a></span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">announce</span><span class="p">;</span>
+
+<span class="cm">/**
+ 收到服务端发来的消息体
+ 错误信息：
+ cmd=4，result=14，两秒太频繁了【需提示用户】
+ 
+ @param SDLiveIMResponse 消息体
+ */</span>
+<span class="k">@optional</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didReceiveResponse</span><span class="o">:</span><span class="p">(</span><span class="n">SDLiveIMResponse</span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">response</span><span class="p">;</span>
+
+<span class="cm">/**
+ 聊天室登录成功，返回基本的聊天室信息，如登录人员信息、禁言状态、聊天室人数、登录token等
+ 用户登录之后会返回部分之前的消息
+ 当app长链接断开重连的时候，也会调用该方法，所以需要注意登录返回的消息会重复。
+ 
+ @param model SDLiveIMChatRoomModel
+ 
+ @param result 错误码
+ */</span>
+<span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didLogin</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a></span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">model</span>
+    <span class="nf">MessageList</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="o">*&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">messages</span>
+     <span class="nf">withResult</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">result</span><span class="p">;</span>
+
+<span class="cm">/**
+ 消息发送成功，返回发送成功的消息
+
+ @param message 聊天消息数据
+ 
+ @param result 错误码
+ */</span>
+<span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didSendMessage</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span>
+           <span class="nf">withResult</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">result</span><span class="p">;</span>
+
+<span class="cm">/**
+ * 聊天室解散通知，客户端无需重连
+ * */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didChatRoomClose</span><span class="p">;</span>
+
+<span class="cm">/**
+ 用户批量下线通知，聊天人数变更
+
+ @param number 剩余聊天人数
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomBatchOffline</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">number</span><span class="p">;</span>
+
+<span class="cm">/**
+ 用户进入、退出聊天室回调，会返回聊天室当前人数、以及退出用户的信息
+
+ @param event SDLiveIMChatRoomEvent
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didRoomUserEvent</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMChatRoomEvent.html">SDLiveIMChatRoomEvent</a></span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span>
+
+<span class="cm">/**
+ 用户同一时间只会在一个直播间内，重复登录会给前一个连接发送被踢通知看，同时将前一个连接关掉
+ 客户端收到踢人通知，websocket无需重连，该token用户被踢了
+
+ @param userToken 被挤下线的用户token
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomKickOffUser</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">userToken</span><span class="p">;</span>
+
+<span class="cm">/**
+ * 全体禁言，收到禁言/解禁 通知，禁止或允许用户发送信息，
+ * status false：不禁言，true：禁言
+ * */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomForbiddenStatusChange</span><span class="p">:(</span><span class="n">Boolean</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span>
+
+<span class="cm">/**
+ * 个人禁言，收到禁言/解禁 通知，禁止或允许用户发送信息，
+ * status false：不禁言，true：禁言
+ * */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomDidForbiddenUserTalk</span><span class="p">:(</span><span class="n">Boolean</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span>
+
+<span class="cm">/**
+ 
+ 该通知用于老师或者助教更新本地的学员大表和被踢用户列表。
+ 1. 老师或者助教主动将某个学员踢出直播间, 该通知会发送给被踢人以及其他的老师或者助教。
+ 2. 老师或者助教主动将某个学员取消踢人状态，该通知会发送给其他老师或者助教。
+ @param status false：不禁言，true：禁言
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomDidUserBeKickOff</span><span class="p">:(</span><span class="n">Boolean</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span>
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didReceiveMessageList:"></a>
+                    <a name="//apple_ref/objc/Method/-didReceiveMessageList:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didReceiveMessageList:">-didReceiveMessageList:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>收到服务端发来的新消息</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveMessageList</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">messages</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveMessageList</span><span class="p">(</span><span class="n">_</span> <span class="nv">messages</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="p">]?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>messages</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>消息列表</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didReceiveAnnounce:"></a>
+                    <a name="//apple_ref/objc/Method/-didReceiveAnnounce:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didReceiveAnnounce:">-didReceiveAnnounce:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>收到服务端发来的公告</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveAnnounce</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMAnnounceModel.html">SDLiveIMAnnounceModel</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">announce</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveAnnounce</span><span class="p">(</span><span class="n">_</span> <span class="nv">announce</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveIMAnnounceModel.html">SDLiveIMAnnounceModel</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>announce</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>公告模型</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didReceiveResponse:"></a>
+                    <a name="//apple_ref/objc/Method/-didReceiveResponse:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didReceiveResponse:">-didReceiveResponse:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveResponse</span><span class="p">:(</span><span class="n">SDLiveIMResponse</span><span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">response</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didReceive</span><span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">SDLiveIMResponse</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didLogin:MessageList:withResult:"></a>
+                    <a name="//apple_ref/objc/Method/-didLogin:MessageList:withResult:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didLogin:MessageList:withResult:">-didLogin:MessageList:withResult:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>聊天室登录成功，返回基本的聊天室信息，如登录人员信息、禁言状态、聊天室人数、登录token等
+用户登录之后会返回部分之前的消息
+当app长链接断开重连的时候，也会调用该方法，所以需要注意登录返回的消息会重复。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didLogin</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">model</span>
+     <span class="nf">MessageList</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">messages</span>
+      <span class="nf">withResult</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">result</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didLogin</span><span class="p">(</span><span class="n">_</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a></span><span class="p">,</span> <span class="n">messageList</span> <span class="nv">messages</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="p">]?,</span> <span class="n">withResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>model</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDLiveIMChatRoomModel</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>错误码</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didSendMessage:withResult:"></a>
+                    <a name="//apple_ref/objc/Method/-didSendMessage:withResult:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didSendMessage:withResult:">-didSendMessage:withResult:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>消息发送成功，返回发送成功的消息</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didSendMessage</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span>
+            <span class="nf">withResult</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">result</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didSendMessage</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="p">,</span> <span class="n">withResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>聊天消息数据</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>错误码</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didChatRoomClose"></a>
+                    <a name="//apple_ref/objc/Method/-didChatRoomClose" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didChatRoomClose">-didChatRoomClose</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>聊天室解散通知，客户端无需重连</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didChatRoomClose</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChatRoomClose</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didChatRoomBatchOffline:"></a>
+                    <a name="//apple_ref/objc/Method/-didChatRoomBatchOffline:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didChatRoomBatchOffline:">-didChatRoomBatchOffline:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>用户批量下线通知，聊天人数变更</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomBatchOffline</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">number</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChatRoomBatchOffline</span><span class="p">(</span><span class="n">_</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>number</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>剩余聊天人数</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didRoomUserEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-didRoomUserEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didRoomUserEvent:">-didRoomUserEvent:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>用户进入、退出聊天室回调，会返回聊天室当前人数、以及退出用户的信息</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didRoomUserEvent</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveIMChatRoomEvent.html">SDLiveIMChatRoomEvent</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didRoomUserEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveIMChatRoomEvent.html">SDLiveIMChatRoomEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDLiveIMChatRoomEvent</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didChatRoomKickOffUser:"></a>
+                    <a name="//apple_ref/objc/Method/-didChatRoomKickOffUser:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didChatRoomKickOffUser:">-didChatRoomKickOffUser:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>用户同一时间只会在一个直播间内，重复登录会给前一个连接发送被踢通知看，同时将前一个连接关掉
+客户端收到踢人通知，websocket无需重连，该token用户被踢了</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomKickOffUser</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">userToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChatRoomKickOffUser</span><span class="p">(</span><span class="n">_</span> <span class="nv">userToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userToken</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>被挤下线的用户token</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didChatRoomForbiddenStatusChange:"></a>
+                    <a name="//apple_ref/objc/Method/-didChatRoomForbiddenStatusChange:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didChatRoomForbiddenStatusChange:">-didChatRoomForbiddenStatusChange:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>全体禁言，收到禁言/解禁 通知，禁止或允许用户发送信息，
+ status false：不禁言，true：禁言</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomForbiddenStatusChange</span><span class="p">:(</span><span class="n">Boolean</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChatRoomForbiddenStatusChange</span><span class="p">(</span><span class="n">_</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didChatRoomDidForbiddenUserTalk:"></a>
+                    <a name="//apple_ref/objc/Method/-didChatRoomDidForbiddenUserTalk:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didChatRoomDidForbiddenUserTalk:">-didChatRoomDidForbiddenUserTalk:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>个人禁言，收到禁言/解禁 通知，禁止或允许用户发送信息，
+ status false：不禁言，true：禁言</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomDidForbiddenUserTalk</span><span class="p">:(</span><span class="n">Boolean</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChatRoomDidForbiddenUserTalk</span><span class="p">(</span><span class="n">_</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SDLiveIMDelegate(im)didChatRoomDidUserBeKickOff:"></a>
+                    <a name="//apple_ref/objc/Method/-didChatRoomDidUserBeKickOff:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveIMDelegate(im)didChatRoomDidUserBeKickOff:">-didChatRoomDidUserBeKickOff:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>该通知用于老师或者助教更新本地的学员大表和被踢用户列表。</p>
+
+<ol>
+<li>老师或者助教主动将某个学员踢出直播间, 该通知会发送给被踢人以及其他的老师或者助教。</li>
+<li>老师或者助教主动将某个学员取消踢人状态，该通知会发送给其他老师或者助教。</li>
+</ol>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didChatRoomDidUserBeKickOff</span><span class="p">:(</span><span class="n">Boolean</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChatRoomDidUserBeKickOff</span><span class="p">(</span><span class="n">_</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>status</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>false：不禁言，true：禁言</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2019@Sunland</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDLiveIMChatRoomModel Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/SDLiveIMChatRoomModel" class="dashAnchor"></a>
+    <a title="SDLiveIMChatRoomModel Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SDLiveProject 1.0.5 Docs</a> (29% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SDLiveProject Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SDLiveIMChatRoomModel Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveAudioService.html">SDLiveAudioService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveError.html">SDLiveError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMAnnounceModel.html">SDLiveIMAnnounceModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMChatRoomEvent.html">SDLiveIMChatRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMChatRoomModel.html">SDLiveIMChatRoomModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLog.html">SDLiveLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginModel.html">SDLiveLoginModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveLoginResModel.html">SDLiveLoginResModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveManager.html">SDLiveManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePageContainerView.html">SDLivePageContainerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePaperModel.html">SDLivePaperModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLivePlayerView.html">SDLivePlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveClientType.html">SDLiveClientType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveConfig.html">SDLiveConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveIMChatRoomEventType.html">SDLiveIMChatRoomEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveImageLoadStatus.html">SDLiveImageLoadStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMovieLoadState.html">SDLiveMovieLoadState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMoviePlaybackState.html">SDLiveMoviePlaybackState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveMovieScalingMode.html">SDLiveMovieScalingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomEvent.html">SDLiveRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomPeopleEvent.html">SDLiveRoomPeopleEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveRoomStatus.html">SDLiveRoomStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveServerErrorCode.html">SDLiveServerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveSocketError.html">SDLiveSocketError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDLiveUserRoleType.html">SDLiveUserRoleType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDSocketState.html">SDSocketState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveDownloadManagerDelegate.html">SDLiveDownloadManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveIMDelegate.html">SDLiveIMDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveLogger.html">SDLiveLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SDLiveManagerDelegate.html">SDLiveManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLiveAudioService.h@T@SDLiveAudioServiceBlock">SDLiveAudioServiceBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerCompleteBlock">SDLivePlayerCompleteBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerErrorBlock">SDLivePlayerErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerLoadStatusCallBlock">SDLivePlayerLoadStatusCallBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SDLivePlayerView.h@T@SDLivePlayerStatusCallBlock">SDLivePlayerStatusCallBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@SDLiveLogEventDebug">SDLiveLogEventDebug</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDLiveIMChatRoomModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDLiveIMChatRoomModel</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/**
+ 登录者token
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">userToken</span><span class="p">;</span>
+
+<span class="cm">/**
+ 唯一的房间Id
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span> <span class="n">liveId</span><span class="p">;</span>
+
+<span class="cm">/**
+ 聊天室人数
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span> <span class="n">number</span><span class="p">;</span>
+
+<span class="cm">/**
+ 房间禁言状态，0：不禁言，1：禁言
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">forbiddenStatus</span><span class="p">;</span>
+
+<span class="cm">/**
+ 类型:Number 说明:房间个人禁言状态，0：不禁言，1：禁言
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">forbiddenStatusSingle</span><span class="p">;</span>
+
+<span class="cm">/**
+ 登陆者姓名
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">name</span><span class="p">;</span>
+
+<span class="cm">/**
+ 登陆者头像
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">portriat</span><span class="p">;</span>
+
+
+<span class="cm">/**
+ 消息数组
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">copy</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="o">*&gt;*</span> <span class="n">messageData</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)userToken"></a>
+                    <a name="//apple_ref/objc/Property/userToken" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)userToken">userToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>登录者token</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">userToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">userToken</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)liveId"></a>
+                    <a name="//apple_ref/objc/Property/liveId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)liveId">liveId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>唯一的房间Id</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span> <span class="n">liveId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">liveId</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)number"></a>
+                    <a name="//apple_ref/objc/Property/number" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)number">number</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>聊天室人数</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span> <span class="n">number</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">number</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLiveDefine.h@T@SDLiveNumber">SDLiveNumber</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)forbiddenStatus"></a>
+                    <a name="//apple_ref/objc/Property/forbiddenStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)forbiddenStatus">forbiddenStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>房间禁言状态，0：不禁言，1：禁言</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">forbiddenStatus</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">forbiddenStatus</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)forbiddenStatusSingle"></a>
+                    <a name="//apple_ref/objc/Property/forbiddenStatusSingle" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)forbiddenStatusSingle">forbiddenStatusSingle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>类型:Number 说明:房间个人禁言状态，0：不禁言，1：禁言</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">forbiddenStatusSingle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">forbiddenStatusSingle</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)name"></a>
+                    <a name="//apple_ref/objc/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)name">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>登陆者姓名</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)portriat"></a>
+                    <a name="//apple_ref/objc/Property/portriat" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)portriat">portriat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>登陆者头像</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">portriat</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">portriat</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveIMChatRoomModel(py)messageData"></a>
+                    <a name="//apple_ref/objc/Property/messageData" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveIMChatRoomModel(py)messageData">messageData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>消息数组</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">messageData</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">messageData</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLiveIMMessageModel.html">SDLiveIMMessageModel</a></span><span class="p">]</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2019@Sunland</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
