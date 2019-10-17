@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, SDLiveConfig){
 };
 
 //服务器返回的code码
-//http://192.168.0.49:9981/view/ErrorCode.tars
+//http://172.16.116.49/doc/ErrorCode.txt
 typedef NS_ENUM(NSInteger, SDLiveServerErrorCode){
     EC_OK = 0,
     EC_PARAMETER_ERROR = 1,         // parameter error
@@ -44,6 +44,8 @@ typedef NS_ENUM(NSInteger, SDLiveServerErrorCode){
     EC_INVOKE_ERROR = 6,            // invoke rpc inner rpc failed
     EC_INVOKE_TIME_OUT = 7,         // invoke rpc time out
     EC_SYSTEM_ERROR = 8,            // system inner error, for client
+    EC_PROTOCOL_ERROR = 9,          // protocol form error
+    EC_HTTP_REQUEST_ERROR = 10,     // request http failed
     EC_MYSQL_EXEC_FAILED = 100,     // mysql exec failed
     
     // -- begin of gate server
@@ -116,6 +118,25 @@ typedef NS_ENUM(NSInteger, SDLiveServerErrorCode){
     EC_ROOM_LIVE_NOT_READY = 10025, // 房间不是未开始状态
     EC_ROOM_LIVE_NOT_PAUSE = 10026, // 房间不是暂停状态
     EC_ROOM_VIDEO_NOT_DONE = 10027, //录播视频还未生成
+    EC_PLAY_URL_EMPTY = 10028, // 拉流URL 的RPC获取为空
+    EC_LIVE_END_FOR_ONLINE = 10029, // 老师不在线导致房间关闭
+    EC_LIVE_END_FOR_STREAM = 10030, // 老师没推流导致房间关闭
+    EC_LIVE_END_FOR_OPERATION = 10031, // 老师挂机导致房间关闭
+    EC_LIVE_END_FOR_DELAY = 10032, // 老师拖堂导致房间关闭
+    EC_PUSH_URL_EMPTY = 10033, // 推流URL 的RPC获取为空
+    EC_KICK_BY_ADMIN = 10034, // 被管理人员踢掉
+    EC_ROOM_DATA_ABNORMAL = 10035, // 房间数据异常
+    EC_REDIS_NO_SUCH_KEY = 11000, // 查询的redis key不存在
+    EC_PLATFORM_TOP_LIMIT = 11001, // 小班课上台列表达到上限
+    EC_NOT_ON_STAGE = 11002, // user is not on stage
+    EC_ALREADY_CONTROL_COURSE = 11003,
+    EC_NOT_CONTROL_COURSE = 11004,
+    EC_ALREADY_ON_STAGE = 11005, // user is already on stage
+    EC_ASSIST_PERMISSION_DENIED = 11006, // 助教权限限制
+    EC_HAND_SHOW_COOL_DOWN = 11007, // 举手冷却中
+
+    EC_NO_PAGE_MAP_INFO = 12001,    // 当前文档没有页映射信息
+    EC_KICK_PERMISSION_DENY = 12002,    // 踢人接口权限不正确，只有老师和助教
     EC_ROOM_SERVER_END = 19999,
     // --end of room server
     
@@ -128,15 +149,15 @@ typedef NS_ENUM(NSInteger, SDLiveServerErrorCode){
     EC_NO_SUCH_FILE          = 20005, // 下载或删除找不到文件
     EC_MISSING_IMAGE         = 20006, // 文档的图片缺失
     EC_REQUEST_ERROR         = 20007, // 请求参数错误
+    EC_FILENAME_EXIST        = 20008, // 相同文件名已经存在
+    EC_SFS_KEY_NOT_EXISTED   = 20009, // sfs key不存在
     EC_DOCUMENT_SERVER_END   = 30000,
     // --end of document server
     
     // --begin of RoomAdmin server
-    EC_NO_INVITATION        = 30001,    // 该房间没有邀请码
-    EC_TEACHER_INVITATION_ERROR     = 30002,    // 老师邀请码验证错误
-    EC_STUDENT_INVITATION_ERROR     = 30003,    // 学生邀请码验证错误
-    EC_INVITATION_TYPE_ERROR = 30004,   // 邀请码类型错误，当前不支持
-    
+    EC_VIDEO_MERGE_FAILED     = 30001,    // 视频合并失败
+    EC_UPDATE_MAKEUP_CONFLICT = 30002,    // 更新补录的老师冲突
+
     EC_CREATE_ROOM_TIME_ERROR = 30005, // 创建房间的时间错误
     EC_CREATE_ROOM_TYPE_ERROR = 30006, // 创建房间的类型错误
     // --end of RoomAdmin server
@@ -150,8 +171,44 @@ typedef NS_ENUM(NSInteger, SDLiveServerErrorCode){
     EC_AUTH_PARAM_ERROR       = 40005, // 请求参数错误, 缺少参数或者字段类型不对
     EC_AUTH_SIGN_ERROR        = 40007,  // 第三方签名校验错误
     EC_AUTH_PARTNER_NOT_EXISTED     = 40008,  // 第三方合作方id不存在
-    EC_AUTH_END               = 50000  //
     // --end of Auth server
+    
+    // --begin of Callback server
+    EC_CALLBACK_BEGIN             = 50000,
+    EC_IP_LOCATE_FAILED = 50001, // 获取ip位置信息失败
+    EC_PAGE_NOT_FOUND = 50002, // 找不到图片页
+
+    // --begin of FragmentServer
+    EC_FRAG_NO_DATA = 60001,
+    EC_FRAG_DB_ERROR = 60002,
+    EC_FRAG_ROOM_NOT_EXIST = 60003,
+    EC_FRAG_VIDEO_NOT_DONE = 60004,
+    EC_FRAG_DOC_NOT_DOWNLOAD = 60005,
+    EC_FRAG_REDIS_EXEC_FAILED = 60006,
+    EC_FRAG_DOC_NOT_EXIST = 60007,
+    // --end of FragmentServer
+    
+    // --begin of agora error
+    EC_AGORA_RECORD_ERROR = 70001,
+    EC_TOOMANY_TASK = 70002,
+    EC_UPLOAD_FAILED = 70003,
+
+
+    // --begin of Convert server
+    EC_CONVERT_BEGIN          = 80000,
+    EC_CONVERT_DB_ERROR       = 80001,
+    EC_CONVERT_TASK_NOT_FOUND = 80002, // 找不到下载任务
+
+    // --begin of GatedLaunchServer
+    EC_GATED_LAUNCH_BEGIN          = 90000,
+    EC_GATED_lAUNCH_DB_ERROR       = 90001,
+    EC_GATED_LAUNCH_SET_NAME_EXIST = 90002,
+    EC_GATED_LAUNCH_USER_KEY_EXIST = 90003,
+
+    // --begin of UserCenterServer
+    EC_UC_BEGIN          = 100000,
+    EC_UC_USER_NOT_EXIST       = 100001,
+
 };
 
 /**
@@ -280,11 +337,13 @@ typedef NS_ENUM(NSInteger, SDLiveUserRoleType){
  - SDLiveSocketErrorJustShow: 仅展示错误信息
  - SDLiveSocketErrorReconnect: 主动重连（RoomServer重启）
  - SDLiveSocketErrorExit: 主动退出（比如重复登陆房间）
+ - SDLiveSocketErrorTokenInvalid：当前token无效，应重新获取token，重新获取失败则停止
  */
 typedef NS_ENUM(NSInteger, SDLiveSocketError){
     SDLiveSocketErrorJustShow = 1,
     SDLiveSocketErrorReconnect = 2,
-    SDLiveSocketErrorExit = 3
+    SDLiveSocketErrorExit = 3,
+    SDLiveSocketErrorTokenInvalid = 4
 } ;
 
 typedef enum :NSUInteger{

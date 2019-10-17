@@ -11,7 +11,7 @@
 @class SDLiveRecorder;
 @class SDLiveRecordModel;
 @protocol SDLivePlayerViewRecorder;
-
+@protocol SDLiveTimerService;
 typedef void(^SDLivePlayerCompleteBlock)(NSError* error);
 
 typedef void(^SDLivePlayerErrorBlock)(NSError* error);
@@ -22,6 +22,8 @@ typedef void(^SDLivePlayerLoadStatusCallBlock)(SDLiveMovieLoadState);
 
 
 @interface SDLivePlayerView : UIView
+
+- (instancetype)initWithFrame:(CGRect)frame service:(id<SDLiveTimerService>)service;
 
 @property (nonatomic, assign, readonly) NSTimeInterval vCache; 
 @property (nonatomic, assign, readonly) NSTimeInterval currentPlayTime;

@@ -17,6 +17,7 @@
 
 /**
  对该错误应该如何处理，参照 SDLiveSocketError
+ http://172.16.116.49:9982/view/ErrorCode.tars
  */
 @property(nonatomic,assign) SDLiveSocketError operation;
 
