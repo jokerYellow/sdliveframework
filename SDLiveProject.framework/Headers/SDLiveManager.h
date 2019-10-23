@@ -193,7 +193,6 @@ didChangeStreamUrl:(UrlSteamType)type;
  
  @param SDLiveIMResponse 消息体
  */
-@optional
 -(void)didReceiveResponse:(SDLiveIMResponse* _Nonnull)response;
 
 /**

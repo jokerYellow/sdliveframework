@@ -25,7 +25,7 @@ pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git'
 * 平台化版本
 
 ```ruby
-pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.5'
+pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.0.9.6'
 ```
 
 * 当前稳定版本1.0.8
