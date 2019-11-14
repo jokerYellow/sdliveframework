@@ -187,15 +187,6 @@ didChangeStreamUrl:(UrlSteamType)type;
 -(void)didReceiveAnnounce:(SDLiveIMAnnounceModel* _Nonnull)announce;
 
 /**
- 收到服务端发来的消息体
- 错误信息：
- cmd=4，result=14，两秒太频繁了【需提示用户】
- 
- @param SDLiveIMResponse 消息体
- */
--(void)didReceiveResponse:(SDLiveIMResponse* _Nonnull)response;
-
-/**
  聊天室登录成功，返回基本的聊天室信息，如登录人员信息、禁言状态、聊天室人数、登录token等
  用户登录之后会返回部分之前的消息
  当app长链接断开重连的时候，也会调用该方法，所以需要注意登录返回的消息会重复。
@@ -265,6 +256,17 @@ didChangeStreamUrl:(UrlSteamType)type;
  @param status false：不禁言，true：禁言
  */
 - (void)didChatRoomDidUserBeKickOff:(Boolean)status;
+
+@optional
+/**
+ 收到服务端发来的消息体
+ 错误信息：
+ cmd=4，result=14，两秒太频繁了【需提示用户】
+ 
+ @param response 消息体
+ */
+-(void)didReceiveResponse:(SDLiveIMResponse* _Nonnull)response;
+
 @end
 
 

@@ -8,18 +8,22 @@
 #import <Foundation/Foundation.h>
 #import "SDLiveDefine.h"
 #import "SDLiveDownloadManager.h"
-
 NS_ASSUME_NONNULL_BEGIN
-
+@class SDDownloadTask;
+@class SDLiveRoomInfo;
 @interface SDLiveDownloadItem : NSObject
+#pragma mark public
 @property (nonatomic, copy) NSString *title;
+
 @property (nonatomic, assign) NSInteger liveId;
 
 @property (nonatomic, assign) SDLiveDownloadStatus status;
 
-@property (nonatomic, assign) NSInteger downloadedSize;
+@property (nonatomic,readonly,strong) SDLiveRoomInfo* roomInfo;
 
-@property (nonatomic, assign) NSInteger totalSize;
+@property (nonatomic, assign,readonly) int64_t downloadedSize;
+
+@property (nonatomic, assign,readonly) int64_t totalSize;
 
 @property(nonatomic, copy, readonly) NSString *storedPath;
 @property(nonatomic, copy, readonly) NSString *configurationPath;
@@ -27,11 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithLiveId:(NSInteger)liveId title:(NSString *)title;
 
-+ (instancetype)itemWithLiveId: (NSInteger)liveId title: (NSString *)title;
++ (instancetype)itemWithLiveId:(NSInteger)liveId title: (NSString *)title;
 
-- (BOOL)save;
-
--(NSString*)pathOfRequestUrl:(NSString*)url;
 @end
 
 NS_ASSUME_NONNULL_END
