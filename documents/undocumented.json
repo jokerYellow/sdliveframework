@@ -1507,338 +1507,471 @@
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 15,
+      "line": 16,
       "symbol": "SDLiveDownloadItem.title",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 16,
+      "line": 18,
       "symbol": "SDLiveDownloadItem.liveId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 18,
+      "line": 20,
       "symbol": "SDLiveDownloadItem.status",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 20,
+      "line": 22,
+      "symbol": "SDLiveDownloadItem.roomInfo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
+      "line": 24,
       "symbol": "SDLiveDownloadItem.downloadedSize",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 22,
+      "line": 26,
       "symbol": "SDLiveDownloadItem.totalSize",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 24,
+      "line": 28,
       "symbol": "SDLiveDownloadItem.storedPath",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 25,
+      "line": 29,
       "symbol": "SDLiveDownloadItem.configurationPath",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 26,
+      "line": 30,
       "symbol": "SDLiveDownloadItem.messagesPath",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 28,
+      "line": 32,
       "symbol": "SDLiveDownloadItem.-initWithLiveId:title:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 30,
+      "line": 34,
       "symbol": "SDLiveDownloadItem.+itemWithLiveId:title:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 32,
-      "symbol": "SDLiveDownloadItem.-save",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 14,
+      "symbol": "SunliveDownloadIdentifier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadItem.h",
-      "line": 34,
-      "symbol": "SDLiveDownloadItem.-pathOfRequestUrl:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 16,
+      "symbol": "SDLiveDownloadErrorDomain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 20,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 20,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 20,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 22,
+      "symbol": ".SUNLAND_SDK_DOWNLOAD_LIVE_ERROR_JSON",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 22,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR..SUNLAND_SDK_DOWNLOAD_LIVE_ERROR_JSON",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
       "line": 23,
+      "symbol": ".SUNLAND_SDK_DOWNLOAD_LIVE_NULL_JSON",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 23,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR..SUNLAND_SDK_DOWNLOAD_LIVE_NULL_JSON",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 26,
+      "symbol": ".SUNLAND_SDK_DOWNLOAD_LIVE_IS_DOWNLOADING",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 26,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR..SUNLAND_SDK_DOWNLOAD_LIVE_IS_DOWNLOADING",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 27,
+      "symbol": ".SUNLAND_SDK_DOWNLOAD_LIVE_ALREADY_DOWNLOADED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 27,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR..SUNLAND_SDK_DOWNLOAD_LIVE_ALREADY_DOWNLOADED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 28,
+      "symbol": ".SUNLAND_SDK_DOWNLOAD_LIVE_PARAM_INVALID",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 28,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR..SUNLAND_SDK_DOWNLOAD_LIVE_PARAM_INVALID",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 29,
+      "symbol": ".SUNLAND_SDK_DOWNLOAD_LIVE_SERVER_ERROR",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 29,
+      "symbol": "SUNLAND_SDK_DOWNLOAD_LIVE_ERROR..SUNLAND_SDK_DOWNLOAD_LIVE_SERVER_ERROR",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 45,
       "symbol": "SDLiveDownloadStatus",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 24,
+      "line": 46,
       "symbol": ".SDLiveDownloadStatusUnStart",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 24,
+      "line": 46,
       "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusUnStart",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 25,
+      "line": 47,
       "symbol": ".SDLiveDownloadStatusDownloading",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 25,
+      "line": 47,
       "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusDownloading",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 26,
+      "line": 48,
       "symbol": ".SDLiveDownloadStatusPause",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 26,
+      "line": 48,
       "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusPause",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 27,
+      "line": 49,
       "symbol": ".SDLiveDownloadStatusFinish",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 27,
+      "line": 49,
       "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusFinish",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 28,
+      "line": 50,
       "symbol": ".SDLiveDownloadStatusError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 28,
+      "line": 50,
       "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 29,
+      "line": 51,
       "symbol": ".SDLiveDownloadStatusUnknown",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 29,
+      "line": 51,
       "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusUnknown",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 33,
+      "line": 52,
+      "symbol": ".SDLiveDownloadStatusStop",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 52,
+      "symbol": "SDLiveDownloadStatus..SDLiveDownloadStatusStop",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 56,
       "symbol": "",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 33,
+      "line": 56,
       "symbol": "SDLiveDownloadDeleteResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 33,
+      "line": 56,
       "symbol": "SDLiveDownloadDeleteResult.",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 34,
+      "line": 57,
       "symbol": ".SDLiveDownloadDeleteResultDidNotFound",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 34,
+      "line": 57,
       "symbol": "SDLiveDownloadDeleteResult..SDLiveDownloadDeleteResultDidNotFound",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 35,
+      "line": 58,
       "symbol": ".SDLiveDownloadDeleteResultSuccess",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 35,
+      "line": 58,
       "symbol": "SDLiveDownloadDeleteResult..SDLiveDownloadDeleteResultSuccess",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 36,
+      "line": 59,
       "symbol": ".SDLiveDownloadDeleteResultOther",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 36,
+      "line": 59,
       "symbol": "SDLiveDownloadDeleteResult..SDLiveDownloadDeleteResultOther",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 39,
+      "line": 62,
       "symbol": "",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 39,
+      "line": 62,
       "symbol": "SDLiveDownloadResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 39,
+      "line": 62,
       "symbol": "SDLiveDownloadResult.",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 40,
+      "line": 63,
       "symbol": ".SDLiveDownloadDidDownload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 40,
+      "line": 63,
       "symbol": "SDLiveDownloadResult..SDLiveDownloadDidDownload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 41,
+      "line": 64,
       "symbol": ".SDLiveDownloadDownload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 41,
+      "line": 64,
       "symbol": "SDLiveDownloadResult..SDLiveDownloadDownload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 138,
+      "line": 67,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 67,
+      "symbol": "SDLiveDownloadError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 67,
+      "symbol": "SDLiveDownloadError.",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 68,
+      "symbol": ".SDLiveDownloadErrorNotValidDownloadUrl",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 68,
+      "symbol": "SDLiveDownloadError..SDLiveDownloadErrorNotValidDownloadUrl",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
+      "line": 119,
       "symbol": "SDLiveDownloadManager",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 140,
+      "line": 121,
       "symbol": "SDLiveDownloadManager.delegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 142,
+      "line": 123,
       "symbol": "SDLiveDownloadManager.+shared",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 145,
-      "symbol": "SDLiveDownloadManager.-downloadItem:withToken:andChannelCode:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 158,
-      "symbol": "SDLiveDownloadManager.-pauseItem:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 161,
-      "symbol": "SDLiveDownloadManager.-deleteItem:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveDownloadManager.h",
-      "line": 164,
-      "symbol": "SDLiveDownloadManager.-getDownloadList",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
@@ -2165,14 +2298,7 @@
     },
     {
       "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveManager.h",
-      "line": 197,
-      "symbol": "SDLiveIMDelegate.-didReceiveResponse:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pipasese/Documents/sdcode/SDLiveProject/Output/SDLiveProject.framework/Headers/SDLiveManager.h",
-      "line": 323,
+      "line": 324,
       "symbol": "SDLiveManager.tcpSpeed",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"

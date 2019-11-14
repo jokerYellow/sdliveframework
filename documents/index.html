@@ -27,6 +27,14 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="changelog.html">ChangeLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -86,10 +94,16 @@
             <a href="Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Constants.html#/c:SDLiveDownloadManager.h@SDLiveDownloadErrorDomain">SDLiveDownloadErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:SDLiveDownloadManager.h@SunliveDownloadIdentifier">SunliveDownloadIdentifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
@@ -170,6 +184,9 @@
                 <a href="Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
               </li>
               <li class="nav-group-task">
+                <a href="Type%20Definitions/SDLiveDownloadError.html">SDLiveDownloadError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
               </li>
               <li class="nav-group-task">
@@ -192,6 +209,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions/SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.html">SUNLAND_SDK_DOWNLOAD_LIVE_ERROR</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
@@ -244,13 +264,7 @@
 <ul>
 <li>平台化版本</li>
 </ul>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDLiveFramework'</span><span class="p">,</span><span class="ss">:git</span><span class="o">=&gt;</span><span class="s1">'https://github.com/jokerYellow/sdliveframework.git'</span><span class="p">,</span><span class="ss">:tag</span><span class="o">=&gt;</span><span class="s1">'1.0.9.5'</span>
-</code></pre>
-
-<ul>
-<li>当前稳定版本1.0.8</li>
-</ul>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDLiveFramework'</span><span class="p">,</span><span class="ss">:git</span><span class="o">=&gt;</span><span class="s1">'https://github.com/jokerYellow/sdliveframework.git'</span><span class="p">,</span><span class="ss">:tag</span><span class="o">=&gt;</span><span class="s1">'1.0.8'</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SDLiveFramework'</span><span class="p">,</span><span class="ss">:git</span><span class="o">=&gt;</span><span class="s1">'https://github.com/jokerYellow/sdliveframework.git'</span><span class="p">,</span><span class="ss">:tag</span><span class="o">=&gt;</span><span class="s1">'1.0.9.6'</span>
 </code></pre>
 
 <blockquote>
@@ -455,107 +469,129 @@ cacheVideoDuration:(NSTimeInterval)cachedDuration;
 <h3 id='高级功能' class='heading'>- 高级功能</h3>
 <h4 id='离线播放' class='heading'>离线播放</h4>
 
-<p>离线播放，SDLiveDownloadManager 类新增平台化下载方法</p>
-<pre class="highlight plaintext"><code>/**
- 平台化下载
+<ol>
+<li>原理
 
- @param item SDLiveDownloadItem，liveId 建议传入 roomId
- @param model SDLiveLoginInfoModel
- */
-- (void)downloadItem:(SDLiveDownloadItem *)item withPlatInfo:(SDLiveLoginInfoModel *)model;
+<ul>
+<li>通过<a href="https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_in_the_background">原生后台下载</a>的方式将视频以及事件、图片资源下载到本地。</li>
+<li>下载完毕之后，使用点播方式进行播放即可。如果已经离线完毕，SDK会使用离线数据进行播放，否则使用线上数据。</li>
+</ul></li>
+<li>开始下载
+
+<ul>
+<li>SDK提供两种方式，一种平台化下载，一种尚直播下载，尚直播的方式在以后会被废弃掉。</li>
+<li>如果该直播正在下载中，或者已经下载完毕，或者传入参数错误，则在初始化的时候会返回错误，可以根据对应的<code><a href="Type%20Definitions/SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.html">SUNLAND_SDK_DOWNLOAD_LIVE_ERROR</a></code>来处理错误。
+&ldquo;` objective-c
+/// 尚直播下载方法 
+NSError* error = [[SDLiveDownloadManager shared] downloadWith:liveId withToken:self.token.text andChannelCode:self.channelCode.text];
+if (error != nil) {
+//handle initial error;
+}</li>
+</ul></li>
+</ol>
+
+<p>/// 平台化下载方法 
+  NSError* error = [[SDLiveDownloadManager shared] downloadWithPlatInfo:model];
+  if (error != nil) {
+    //handle initial error;
+  }</p>
+<pre class="highlight plaintext"><code>3. ⚠️注意的点, 在`APPDelegate`下的回调`handleEventsForBackgroundURLSession` 里添加该方法。
+
+```objective-c
+ - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler{
+    [[SDLiveDownloadManager shared] handleEventsForBackgroundURLSession:identifier completionHandler:completionHandler];
+ }
 </code></pre>
 
+<ol>
+<li>操作方法
+
+<ul>
+<li>暂停</li>
+</ul></li>
+</ol>
+<pre class="highlight plaintext"><code>  /// 暂停下载，如传入的roomId不在下载列表里，不会做任何操作；
+/// 对下载已经完毕或者被暂停不生效
+/// @param roomId 直播间ID
+- (void)pauseWithRoomId:(NSInteger)roomId;
+</code></pre>
+
+<ul>
+<li><p>恢复</p>
+<pre class="highlight plaintext"><code>/// 恢复下载，如传入的roomId不在下载列表里，不会做任何操作
+/// 对下载已经完毕或者被暂停不生效
+/// @param roomId 直播间ID
+- (void)resumeWithRoomId:(NSInteger)roomId;
+</code></pre>
+
+<ul>
+<li>停止
+<code>objective-c
+/// 停止下载，如传入的roomId不在下载列表里，不会做任何操作
+/// @param roomId 直播间ID
+- (void)stopWithRoomId:(NSInteger )roomId;
+</code></li>
+<li>可以删除掉已经下载完毕的直播
+<code>objective-c
+/// 删除某个已经完成的下载，可用于清除缓存，如传入的roomId不在下载列表里，不会做任何操作
+/// 仅对下载完毕的下载项生效
+/// @param roomId 直播间ID
+- (void)removeCachesWithRoomId:(NSInteger )roomId;
+</code></li>
+<li>获取下载列表，<code><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></code>包含下载状态以及直播间等信息
+<code>objective-c
+/// 获取下载列表
+- (NSArray&lt;SDLiveDownloadItem *&gt; *)getDownloadList;
+</code></li>
+</ul></li>
+</ul>
+
 <p>离线播放代理</p>
-<pre class="highlight objective_c"><code><span class="cm">/**
+<pre class="highlight plaintext"><code>/**
  下载代理
- */</span>
-<span class="k">@protocol</span> <span class="nc">SDLiveDownloadManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+ */
+@protocol SDLiveDownloadManagerDelegate &lt;NSObject&gt;
+/// 下载认证失败
+/// @param manager
+/// @param roomId 直播间ID
+/// @param error 错误信息
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   roomId:(NSInteger)roomId
+    authorizationFailed:(NSError *_Nullable)error;
 
+/// 开始下载
+/// @param manager
+/// @param roomId 直播间ID
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+      beginDownloadRoomId:(NSInteger)roomId;
 
-<span class="cm">/**
- 离线下载认证失败
+/// 下载进度变化
+/// @param manager SDLiveDownloadManager
+/// @param roomId 直播间ID
+/// @param downloadSize 已经下载的比特数
+/// @param totalSize 该直播间总共比特数
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   roomId:(NSInteger)roomId
+         progressChange:(NSInteger)downloadSize
+              totalSize:(NSInteger)totalSize;
 
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- @param error NSError
- */</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">downloadManager</span><span class="o">:</span><span class="p">(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="n">manager</span>
-                   <span class="n">item</span><span class="o">:</span><span class="p">(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="n">item</span>
-    <span class="n">authorizationFailed</span><span class="o">:</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="n">error</span><span class="p">;</span>
+/// 下载过程中发生错误
+/// @param manager SDLiveDownloadManager
+/// @param roomId 直播间ID
+/// @param error 错误信息
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   roomId:(NSInteger)roomId
+          errorOccurred:(NSError *_Nullable)error;
 
+/// 下载完成
+/// @param manager SDLiveDownloadManager
+/// @param roomId 直播间ID
+/// @param error 下载完成时可能出现的错误信息
+- (void)downloadManager:(SDLiveDownloadManager *_Nonnull)manager
+                   roomId:(NSInteger)roomId
+               complete:(NSError *_Nullable)error;
 
-<span class="cm">/**
- 离线下载开始下载
-
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-      <span class="nf">beginDownloadItem</span><span class="p">:(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span>
-
-
-<span class="cm">/**
- 离线下载状态变化
-
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- @param status SDLiveDownloadStatus
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-           <span class="nf">StatusChange</span><span class="p">:(</span><span class="n">SDLiveDownloadStatus</span><span class="p">)</span><span class="nv">status</span><span class="p">;</span>
-
-
-<span class="cm">/**
- 离线下载进度变化
-
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- @param downloadSize NSInteger 已下载大小
- @param totalSize NSInteger 总大小
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-         <span class="nf">progressChange</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">downloadSize</span>
-              <span class="nf">totalSize</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">totalSize</span><span class="p">;</span>
-
-
-<span class="cm">/**
- 下载出错
-
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- @param error NSError
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-          <span class="nf">errorOccurred</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
-
-
-<span class="cm">/**
- 下载完成
-
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- @param error NSError
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-               <span class="nf">complete</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
-
-
-<span class="cm">/**
- 删除完成
-
- @param manager SDLiveDownloadManager
- @param item SDLiveDownloadItem
- @param error NSError
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n">SDLiveDownloadManager</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-          <span class="nf">didDeleteItem</span><span class="p">:</span> <span class="p">(</span><span class="n">SDLiveDownloadItem</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-               <span class="nf">complete</span><span class="p">:</span> <span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
-
-<span class="k">@end</span>
+@end
 </code></pre>
 <h4 id='获取音频文件链接' class='heading'>获取音频文件链接</h4>
 

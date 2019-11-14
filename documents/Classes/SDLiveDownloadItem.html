@@ -28,6 +28,14 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../changelog.html">ChangeLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -87,10 +95,16 @@
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:SDLiveDownloadManager.h@SDLiveDownloadErrorDomain">SDLiveDownloadErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:SDLiveDownloadManager.h@SunliveDownloadIdentifier">SunliveDownloadIdentifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
@@ -171,6 +185,9 @@
                 <a href="../Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadError.html">SDLiveDownloadError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
               </li>
               <li class="nav-group-task">
@@ -195,6 +212,9 @@
                 <a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions/SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.html">SUNLAND_SDK_DOWNLOAD_LIVE_ERROR</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
               </li>
             </ul>
@@ -216,14 +236,18 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDLiveDownloadItem</span> <span class="p">:</span> <span class="nc">NSObject</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">title</span><span class="p">;</span>
+<span class="cp">#pragma mark public
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">title</span><span class="p">;</span>
+
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">liveId</span><span class="p">;</span>
 
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a></span> <span class="n">status</span><span class="p">;</span>
 
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">downloadedSize</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">readonly</span><span class="p">,</span><span class="n">strong</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a></span><span class="o">*</span> <span class="n">roomInfo</span><span class="p">;</span>
 
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">totalSize</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="kt">int64_t</span> <span class="n">downloadedSize</span><span class="p">;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="kt">int64_t</span> <span class="n">totalSize</span><span class="p">;</span>
 
 <span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">storedPath</span><span class="p">;</span>
 <span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">configurationPath</span><span class="p">;</span>
@@ -231,11 +255,8 @@
 
 <span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithLiveId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">itemWithLiveId</span><span class="p">:</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">itemWithLiveId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span>
 
-<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">save</span><span class="p">;</span>
-
-<span class="k">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">pathOfRequestUrl</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span>
 <span class="k">@end</span></code></pre>
 
                 </div>
@@ -245,6 +266,13 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/public"></a>
+                <a name="//apple_ref/objc/Section/public" class="dashAnchor"></a>
+                <a href="#/public">
+                  <h3 class="section-name">public</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -345,6 +373,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)SDLiveDownloadItem(py)roomInfo"></a>
+                    <a name="//apple_ref/objc/Property/roomInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadItem(py)roomInfo">roomInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">readonly</span><span class="p">,</span><span class="n">strong</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a></span><span class="o">*</span> <span class="n">roomInfo</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">roomInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)SDLiveDownloadItem(py)downloadedSize"></a>
                     <a name="//apple_ref/objc/Property/downloadedSize" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SDLiveDownloadItem(py)downloadedSize">downloadedSize</a>
@@ -362,12 +422,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">downloadedSize</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="kt">int64_t</span> <span class="n">downloadedSize</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">downloadedSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">downloadedSize</span><span class="p">:</span> <span class="kt">Int64</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -394,12 +454,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">totalSize</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="kt">int64_t</span> <span class="n">totalSize</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">totalSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">totalSize</span><span class="p">:</span> <span class="kt">Int64</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -554,71 +614,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">itemWithLiveId</span><span class="p">:</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDLiveDownloadItem(im)save"></a>
-                    <a name="//apple_ref/objc/Method/-save" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDLiveDownloadItem(im)save">-save</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">save</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">save</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDLiveDownloadItem(im)pathOfRequestUrl:"></a>
-                    <a name="//apple_ref/objc/Method/-pathOfRequestUrl:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDLiveDownloadItem(im)pathOfRequestUrl:">-pathOfRequestUrl:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">pathOfRequestUrl</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">path</span><span class="p">(</span><span class="n">ofRequestUrl</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">itemWithLiveId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>

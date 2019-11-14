@@ -28,6 +28,14 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../changelog.html">ChangeLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -87,10 +95,16 @@
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:SDLiveDownloadManager.h@SDLiveDownloadErrorDomain">SDLiveDownloadErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:SDLiveDownloadManager.h@SunliveDownloadIdentifier">SunliveDownloadIdentifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
@@ -171,6 +185,9 @@
                 <a href="../Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadError.html">SDLiveDownloadError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
               </li>
               <li class="nav-group-task">
@@ -193,6 +210,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.html">SUNLAND_SDK_DOWNLOAD_LIVE_ERROR</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
@@ -221,28 +241,52 @@
 
 <span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">shared</span><span class="p">;</span>
 
-<span class="cm">/*下载Item*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span>
+<span class="c1">/// 尚直播下载方法
+/// 下载直播间视频，如果该直播间正在下载中，或者已经下载完毕，或者传入参数错误，则会返回错误
+/// @param roomId 直播间ID
+/// @param token token
+/// @param channelCode channelCode
+</span><span class="k">-</span> <span class="p">(</span><span class="n">NSError</span><span class="o">*</span><span class="p">)</span><span class="nf">downloadWith</span><span class="p">:(</span><span class="n">NSInteger</span> <span class="p">)</span><span class="nv">roomId</span>
            <span class="nf">withToken</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">token</span>
-      <span class="nf">andChannelCode</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">channelCode</span><span class="p">;</span>
+          <span class="nf">andChannelCode</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">channelCode</span><span class="p">;</span>
 
-<span class="cm">/**
- 平台化下载
+<span class="c1">/// 平台化下载方法
+/// 下载直播间视频，如果该直播间正在下载中，或者已经下载完毕，或者传入参数错误，则会返回错误
+/// @param model SDLiveLoginInfoModel
+</span><span class="k">-</span> <span class="p">(</span><span class="n">NSError</span><span class="o">*</span><span class="p">)</span><span class="nf">downloadWithPlatInfo</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">model</span><span class="p">;</span>
+  
+<span class="c1">/// 暂停下载，如传入的roomId不在下载列表里，不会做任何操作；
+/// 对下载已经完毕或者被暂停不生效
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pauseWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
 
- @param item SDLiveDownloadItem，liveId 建议传入 roomId
- @param model SDLiveLoginInfoModel
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span> <span class="nf">withPlatInfo</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">model</span><span class="p">;</span>
+<span class="c1">/// 恢复下载，如传入的roomId不在下载列表里，不会做任何操作
+/// 对下载已经完毕或者被暂停不生效
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">resumeWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
 
-<span class="cm">/*暂停某个下载*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pauseItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span>
+<span class="c1">/// 停止下载，如传入的roomId不在下载列表里，不会做任何操作
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span> <span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
+ 
+<span class="c1">/// 删除某个已经完成的下载，可用于清除缓存，如传入的roomId不在下载列表里，不会做任何操作
+/// 仅对下载完毕的下载项生效
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCachesWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span> <span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
+ 
+<span class="c1">/// 获取下载列表
+</span><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getDownloadList</span><span class="p">;</span>
 
-<span class="cm">/*删除对应的下载*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span>
 
-<span class="cm">/*获取下载列表*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getDownloadList</span><span class="p">;</span>
-
+<span class="c1">///  在APPDelegate下的回调 handleEventsForBackgroundURLSession 里添加该方法。
+///  在后台下载完成，app在后台的情况下会触发该回调。
+///
+/// - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler{
+///    [[SDLiveDownloadManager shared] handleEventsForBackgroundURLSession:identifier completionHandler:completionHandler];
+/// }
+/// @param identifier The identifier of the URL session requiring attention. If your app was just launched, you can use this identifier to create a new NSURLSession object that can receive the events.
+/// @param completionHandler The completion handler to call when you finish processing the events. Calling this completion handler lets the system know that your app’s user interface is updated and a new snapshot can be taken.
+</span><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">handleEventsForBackgroundURLSession</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span> <span class="nf">completionHandler</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span>
 <span class="k">@end</span></code></pre>
 
                 </div>
@@ -320,9 +364,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SDLiveDownloadManager(im)downloadItem:withToken:andChannelCode:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadItem:withToken:andChannelCode:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)downloadItem:withToken:andChannelCode:">-downloadItem:withToken:andChannelCode:</a>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)downloadWith:withToken:andChannelCode:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadWith:withToken:andChannelCode:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)downloadWith:withToken:andChannelCode:">-downloadWith:withToken:andChannelCode:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -330,54 +374,22 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>尚直播下载方法
+下载直播间视频，如果该直播间正在下载中，或者已经下载完毕，或者传入参数错误，则会返回错误</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span>
-           <span class="nf">withToken</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">token</span>
-      <span class="nf">andChannelCode</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">channelCode</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nf">downloadWith</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span>
+                        <span class="nf">withToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">token</span>
+                   <span class="nf">andChannelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">channelCode</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadItem</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">withToken</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">andChannelCode</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SDLiveDownloadManager(im)downloadItem:withPlatInfo:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadItem:withPlatInfo:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)downloadItem:withPlatInfo:">-downloadItem:withPlatInfo:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>平台化下载</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadItem</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span>
-        <span class="nf">withPlatInfo</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">model</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadItem</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">withPlatInfo</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="n">with</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">withToken</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">andChannelCode</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>
@@ -388,15 +400,79 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>item</em>
+                                <em>roomId</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadItem，liveId 建议传入 roomId</p>
+                                  <p>直播间ID</p>
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>token</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>channelCode</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)downloadWithPlatInfo:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadWithPlatInfo:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)downloadWithPlatInfo:">-downloadWithPlatInfo:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>平台化下载方法
+下载直播间视频，如果该直播间正在下载中，或者已经下载完毕，或者传入参数错误，则会返回错误</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nf">downloadWithPlatInfo</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">model</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="n">withPlatInfo</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
                             <tr>
                               <td>
                                 <code>
@@ -418,9 +494,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SDLiveDownloadManager(im)pauseItem:"></a>
-                    <a name="//apple_ref/objc/Method/-pauseItem:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)pauseItem:">-pauseItem:</a>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)pauseWithRoomId:"></a>
+                    <a name="//apple_ref/objc/Method/-pauseWithRoomId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)pauseWithRoomId:">-pauseWithRoomId:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -428,21 +504,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>暂停下载，如传入的roomId不在下载列表里，不会做任何操作；
+对下载已经完毕或者被暂停不生效</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pauseItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pauseWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pause</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pause</span><span class="p">(</span><span class="n">withRoomId</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>roomId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>直播间ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -450,9 +546,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SDLiveDownloadManager(im)deleteItem:"></a>
-                    <a name="//apple_ref/objc/Method/-deleteItem:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)deleteItem:">-deleteItem:</a>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)resumeWithRoomId:"></a>
+                    <a name="//apple_ref/objc/Method/-resumeWithRoomId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)resumeWithRoomId:">-resumeWithRoomId:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -460,21 +556,144 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>恢复下载，如传入的roomId不在下载列表里，不会做任何操作
+对下载已经完毕或者被暂停不生效</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">resumeWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resume</span><span class="p">(</span><span class="n">withRoomId</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>roomId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>直播间ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)stopWithRoomId:"></a>
+                    <a name="//apple_ref/objc/Method/-stopWithRoomId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)stopWithRoomId:">-stopWithRoomId:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>停止下载，如传入的roomId不在下载列表里，不会做任何操作</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stop</span><span class="p">(</span><span class="n">withRoomId</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>roomId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>直播间ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)removeCachesWithRoomId:"></a>
+                    <a name="//apple_ref/objc/Method/-removeCachesWithRoomId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)removeCachesWithRoomId:">-removeCachesWithRoomId:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>删除某个已经完成的下载，可用于清除缓存，如传入的roomId不在下载列表里，不会做任何操作
+仅对下载完毕的下载项生效</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCachesWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeCaches</span><span class="p">(</span><span class="n">withRoomId</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>roomId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>直播间ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -492,14 +711,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>获取下载列表</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getDownloadList</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getDownloadList</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -507,6 +726,78 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDownloadList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SDLiveDownloadManager(im)handleEventsForBackgroundURLSession:completionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-handleEventsForBackgroundURLSession:completionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SDLiveDownloadManager(im)handleEventsForBackgroundURLSession:completionHandler:">-handleEventsForBackgroundURLSession:completionHandler:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>在APPDelegate下的回调 handleEventsForBackgroundURLSession 里添加该方法。
+ 在后台下载完成，app在后台的情况下会触发该回调。</p>
+
+<ul>
+<li>(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler{
+[[SDLiveDownloadManager shared] handleEventsForBackgroundURLSession:identifier completionHandler:completionHandler];
+}</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">handleEventsForBackgroundURLSession</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span>
+                          <span class="nf">completionHandler</span><span class="p">:</span>
+                              <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handleEvents</span><span class="p">(</span><span class="n">forBackgroundURLSession</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>identifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier of the URL session requiring attention. If your app was just launched, you can use this identifier to create a new NSURLSession object that can receive the events.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion handler to call when you finish processing the events. Calling this completion handler lets the system know that your app’s user interface is updated and a new snapshot can be taken.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

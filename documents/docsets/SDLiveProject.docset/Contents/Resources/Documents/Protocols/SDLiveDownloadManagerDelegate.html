@@ -28,6 +28,14 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../changelog.html">ChangeLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -87,10 +95,16 @@
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:SDLiveDownloadManager.h@SDLiveDownloadErrorDomain">SDLiveDownloadErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:SDLiveDownloadManager.h@SunliveDownloadIdentifier">SunliveDownloadIdentifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
@@ -171,6 +185,9 @@
                 <a href="../Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Type%20Definitions/SDLiveDownloadError.html">SDLiveDownloadError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
               </li>
               <li class="nav-group-task">
@@ -193,6 +210,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.html">SUNLAND_SDK_DOWNLOAD_LIVE_ERROR</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
@@ -228,9 +248,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:authorizationFailed:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:item:authorizationFailed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:authorizationFailed:">-downloadManager:item:authorizationFailed:</a>
+                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:authorizationFailed:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadManager:roomId:authorizationFailed:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:authorizationFailed:">-downloadManager:roomId:authorizationFailed:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -238,7 +258,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>离线下载认证失败</p>
+                        <p>下载认证失败</p>
 
                       </div>
                       <div class="declaration">
@@ -246,13 +266,13 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
+                 <span class="nf">roomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span>
     <span class="nf">authorizationFailed</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">authorizationFailed</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">authorizationFailed</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -268,19 +288,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadManager</p>
+                                  <p></p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>item</em>
+                                <em>roomId</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadItem</p>
+                                  <p>直播间ID</p>
                                 </div>
                               </td>
                             </tr>
@@ -292,7 +312,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>NSError</p>
+                                  <p>错误信息</p>
                                 </div>
                               </td>
                             </tr>
@@ -305,9 +325,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:beginDownloadItem:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:beginDownloadItem:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:beginDownloadItem:">-downloadManager:beginDownloadItem:</a>
+                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:beginDownloadRoomId:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadManager:beginDownloadRoomId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:beginDownloadRoomId:">-downloadManager:beginDownloadRoomId:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -315,7 +335,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>离线下载开始下载</p>
+                        <p>开始下载</p>
 
                       </div>
                       <div class="declaration">
@@ -323,12 +343,12 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-      <span class="nf">beginDownloadItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span></code></pre>
+    <span class="nf">beginDownloadRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="n">begin</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="n">beginDownloadRoomId</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -344,19 +364,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadManager</p>
+                                  <p></p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>item</em>
+                                <em>roomId</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadItem</p>
+                                  <p>直播间ID</p>
                                 </div>
                               </td>
                             </tr>
@@ -369,9 +389,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:StatusChange:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:item:StatusChange:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:StatusChange:">-downloadManager:item:StatusChange:</a>
+                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:progressChange:totalSize:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadManager:roomId:progressChange:totalSize:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:progressChange:totalSize:">-downloadManager:roomId:progressChange:totalSize:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -379,7 +399,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>离线下载状态变化</p>
+                        <p>下载进度变化</p>
 
                       </div>
                       <div class="declaration">
@@ -387,91 +407,14 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-           <span class="nf">StatusChange</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a></span><span class="p">)</span><span class="nv">status</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">statusChange</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>manager</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>SDLiveDownloadManager</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>item</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>SDLiveDownloadItem</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>status</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>SDLiveDownloadStatus</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:progressChange:totalSize:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:item:progressChange:totalSize:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:progressChange:totalSize:">-downloadManager:item:progressChange:totalSize:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>离线下载进度变化</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
+                 <span class="nf">roomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span>
          <span class="nf">progressChange</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">downloadSize</span>
               <span class="nf">totalSize</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">totalSize</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">progressChange</span> <span class="nv">downloadSize</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">totalSize</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">progressChange</span> <span class="nv">downloadSize</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">totalSize</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -494,12 +437,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>item</em>
+                                <em>roomId</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadItem</p>
+                                  <p>直播间ID</p>
                                 </div>
                               </td>
                             </tr>
@@ -511,7 +454,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>NSInteger 已下载大小</p>
+                                  <p>已经下载的比特数</p>
                                 </div>
                               </td>
                             </tr>
@@ -523,7 +466,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>NSInteger 总大小</p>
+                                  <p>该直播间总共比特数</p>
                                 </div>
                               </td>
                             </tr>
@@ -536,9 +479,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:errorOccurred:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:item:errorOccurred:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:errorOccurred:">-downloadManager:item:errorOccurred:</a>
+                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:errorOccurred:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadManager:roomId:errorOccurred:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:errorOccurred:">-downloadManager:roomId:errorOccurred:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -546,7 +489,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>下载出错</p>
+                        <p>下载过程中发生错误</p>
 
                       </div>
                       <div class="declaration">
@@ -554,13 +497,13 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
+                 <span class="nf">roomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span>
           <span class="nf">errorOccurred</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">errorOccurred</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">errorOccurred</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -583,12 +526,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>item</em>
+                                <em>roomId</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadItem</p>
+                                  <p>直播间ID</p>
                                 </div>
                               </td>
                             </tr>
@@ -600,7 +543,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>NSError</p>
+                                  <p>错误信息</p>
                                 </div>
                               </td>
                             </tr>
@@ -613,9 +556,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:complete:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:item:complete:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:item:complete:">-downloadManager:item:complete:</a>
+                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:complete:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadManager:roomId:complete:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:roomId:complete:">-downloadManager:roomId:complete:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -631,13 +574,13 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-                   <span class="nf">item</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
+                 <span class="nf">roomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span>
                <span class="nf">complete</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">complete</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="nv">roomId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">complete</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -660,12 +603,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>item</em>
+                                <em>roomId</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>SDLiveDownloadItem</p>
+                                  <p>直播间ID</p>
                                 </div>
                               </td>
                             </tr>
@@ -677,84 +620,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>NSError</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:didDeleteItem:complete:"></a>
-                    <a name="//apple_ref/objc/Method/-downloadManager:didDeleteItem:complete:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SDLiveDownloadManagerDelegate(im)downloadManager:didDeleteItem:complete:">-downloadManager:didDeleteItem:complete:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>删除完成</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadManager</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">manager</span>
-          <span class="nf">didDeleteItem</span><span class="p">:(</span><span class="n"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">item</span>
-               <span class="nf">complete</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">downloadManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadManager.html">SDLiveDownloadManager</a></span><span class="p">,</span> <span class="n">didDelete</span> <span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span><span class="p">,</span> <span class="n">complete</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>manager</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>SDLiveDownloadManager</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>item</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>SDLiveDownloadItem</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>error</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>NSError</p>
+                                  <p>下载完成时可能出现的错误信息</p>
                                 </div>
                               </td>
                             </tr>

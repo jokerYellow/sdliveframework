@@ -28,6 +28,14 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="changelog.html">ChangeLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -87,10 +95,16 @@
             <a href="Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Constants.html#/c:SDLiveDownloadManager.h@SDLiveDownloadErrorDomain">SDLiveDownloadErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDLiveProjectVersionNumber">SDLiveProjectVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@SDLiveProjectVersionString">SDLiveProjectVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:SDLiveDownloadManager.h@SunliveDownloadIdentifier">SunliveDownloadIdentifier</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@sdlive_sdk_version">sdlive_sdk_version</a>
@@ -171,6 +185,9 @@
                 <a href="Type%20Definitions/SDLiveDownloadDeleteResult.html">SDLiveDownloadDeleteResult</a>
               </li>
               <li class="nav-group-task">
+                <a href="Type%20Definitions/SDLiveDownloadError.html">SDLiveDownloadError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Type%20Definitions/SDLiveDownloadResult.html">SDLiveDownloadResult</a>
               </li>
               <li class="nav-group-task">
@@ -193,6 +210,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions/SDVideoType.html">SDVideoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions/SUNLAND_SDK_DOWNLOAD_LIVE_ERROR.html">SUNLAND_SDK_DOWNLOAD_LIVE_ERROR</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions/UrlSteamType.html">UrlSteamType</a>
@@ -278,14 +298,18 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SDLiveDownloadItem</span> <span class="p">:</span> <span class="nc">NSObject</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">title</span><span class="p">;</span>
+<span class="cp">#pragma mark public
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">title</span><span class="p">;</span>
+
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">liveId</span><span class="p">;</span>
 
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Type%20Definitions/SDLiveDownloadStatus.html">SDLiveDownloadStatus</a></span> <span class="n">status</span><span class="p">;</span>
 
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">downloadedSize</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">readonly</span><span class="p">,</span><span class="n">strong</span><span class="p">)</span> <span class="n"><a href="Classes/SDLiveRoomInfo.html">SDLiveRoomInfo</a></span><span class="o">*</span> <span class="n">roomInfo</span><span class="p">;</span>
 
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">totalSize</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="kt">int64_t</span> <span class="n">downloadedSize</span><span class="p">;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="kt">int64_t</span> <span class="n">totalSize</span><span class="p">;</span>
 
 <span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">storedPath</span><span class="p">;</span>
 <span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">configurationPath</span><span class="p">;</span>
@@ -293,11 +317,8 @@
 
 <span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithLiveId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">itemWithLiveId</span><span class="p">:</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">itemWithLiveId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">liveId</span> <span class="nf">title</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span><span class="p">;</span>
 
-<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">save</span><span class="p">;</span>
-
-<span class="k">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">pathOfRequestUrl</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span>
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -341,28 +362,52 @@
 
 <span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">shared</span><span class="p">;</span>
 
-<span class="cm">/*下载Item*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadItem</span><span class="p">:(</span><span class="n"><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span>
+<span class="c1">/// 尚直播下载方法
+/// 下载直播间视频，如果该直播间正在下载中，或者已经下载完毕，或者传入参数错误，则会返回错误
+/// @param roomId 直播间ID
+/// @param token token
+/// @param channelCode channelCode
+</span><span class="k">-</span> <span class="p">(</span><span class="n">NSError</span><span class="o">*</span><span class="p">)</span><span class="nf">downloadWith</span><span class="p">:(</span><span class="n">NSInteger</span> <span class="p">)</span><span class="nv">roomId</span>
            <span class="nf">withToken</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">token</span>
-      <span class="nf">andChannelCode</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">channelCode</span><span class="p">;</span>
+          <span class="nf">andChannelCode</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">channelCode</span><span class="p">;</span>
 
-<span class="cm">/**
- 平台化下载
+<span class="c1">/// 平台化下载方法
+/// 下载直播间视频，如果该直播间正在下载中，或者已经下载完毕，或者传入参数错误，则会返回错误
+/// @param model SDLiveLoginInfoModel
+</span><span class="k">-</span> <span class="p">(</span><span class="n">NSError</span><span class="o">*</span><span class="p">)</span><span class="nf">downloadWithPlatInfo</span><span class="p">:(</span><span class="n"><a href="Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">model</span><span class="p">;</span>
+  
+<span class="c1">/// 暂停下载，如传入的roomId不在下载列表里，不会做任何操作；
+/// 对下载已经完毕或者被暂停不生效
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pauseWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
 
- @param item SDLiveDownloadItem，liveId 建议传入 roomId
- @param model SDLiveLoginInfoModel
- */</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadItem</span><span class="p">:(</span><span class="n"><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span> <span class="nf">withPlatInfo</span><span class="p">:(</span><span class="n"><a href="Classes/SDLiveLoginInfoModel.html">SDLiveLoginInfoModel</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">model</span><span class="p">;</span>
+<span class="c1">/// 恢复下载，如传入的roomId不在下载列表里，不会做任何操作
+/// 对下载已经完毕或者被暂停不生效
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">resumeWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
 
-<span class="cm">/*暂停某个下载*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pauseItem</span><span class="p">:(</span><span class="n"><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span>
+<span class="c1">/// 停止下载，如传入的roomId不在下载列表里，不会做任何操作
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span> <span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
+ 
+<span class="c1">/// 删除某个已经完成的下载，可用于清除缓存，如传入的roomId不在下载列表里，不会做任何操作
+/// 仅对下载完毕的下载项生效
+/// @param roomId 直播间ID
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCachesWithRoomId</span><span class="p">:(</span><span class="n">NSInteger</span> <span class="p">)</span><span class="nv">roomId</span><span class="p">;</span>
+ 
+<span class="c1">/// 获取下载列表
+</span><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getDownloadList</span><span class="p">;</span>
 
-<span class="cm">/*删除对应的下载*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteItem</span><span class="p">:(</span><span class="n"><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">item</span><span class="p">;</span>
 
-<span class="cm">/*获取下载列表*/</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/SDLiveDownloadItem.html">SDLiveDownloadItem</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getDownloadList</span><span class="p">;</span>
-
+<span class="c1">///  在APPDelegate下的回调 handleEventsForBackgroundURLSession 里添加该方法。
+///  在后台下载完成，app在后台的情况下会触发该回调。
+///
+/// - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler{
+///    [[SDLiveDownloadManager shared] handleEventsForBackgroundURLSession:identifier completionHandler:completionHandler];
+/// }
+/// @param identifier The identifier of the URL session requiring attention. If your app was just launched, you can use this identifier to create a new NSURLSession object that can receive the events.
+/// @param completionHandler The completion handler to call when you finish processing the events. Calling this completion handler lets the system know that your app’s user interface is updated and a new snapshot can be taken.
+</span><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">handleEventsForBackgroundURLSession</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span> <span class="nf">completionHandler</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span>
 <span class="k">@end</span></code></pre>
 
                         </div>
