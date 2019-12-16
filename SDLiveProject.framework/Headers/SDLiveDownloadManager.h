@@ -13,7 +13,7 @@
 
 static NSString * const _Nonnull  SunliveDownloadIdentifier = @"com.sunlive.download";
 
-static NSErrorDomain const SDLiveDownloadErrorDomain = @"com.sunland.live.sdk.download";
+static NSErrorDomain const _Nonnull SDLiveDownloadErrorDomain = @"com.sunland.live.sdk.download";
 
 
 //SDLiveDownloadErrorDomain error code

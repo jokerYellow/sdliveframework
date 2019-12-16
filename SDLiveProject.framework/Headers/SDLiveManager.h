@@ -469,4 +469,6 @@ didChangeStreamUrl:(UrlSteamType)type;
  */
 + (void)setConfigType:(SDLiveConfig)type;
 
+
++ (void)cleanImageCache;
 @end
