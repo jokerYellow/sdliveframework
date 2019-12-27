@@ -11,6 +11,11 @@
 @class SDLivePage;
 @class SDLivePlayUrlInfo;
 
+typedef enum : NSUInteger {
+    SDLiveFakeLiveSync = 1,
+    SDLiveFakeLiveAsync = 2,
+} SDLiveFakeLiveMode;
+
 /*
  struct RoomInfo
  {
@@ -61,4 +66,14 @@
 @property (nonatomic,assign) SDLiveNumber iImId;
 @property (nonatomic,assign) SDLiveRoomStatus iStatus;// 1表示未开始，2表示上课中，3表示暂停，4表示已结束
 @property (nonatomic,strong) SDLivePage* page;
+
+/**
+ 伪直播才有，资源ID
+ */
+@property (nonatomic,assign) SDLiveNumber iResourceId;
+/**
+ 伪直播才有，观看偏移量
+ */
+@property (nonatomic,assign) SDLiveNumber lWatchSequence;
+
 @end

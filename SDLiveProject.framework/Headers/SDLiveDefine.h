@@ -14,6 +14,11 @@
     #define NSLog(...) (void)0
 #endif
 
+extern NSErrorDomain SDLiveErrorDomain;
+extern NSErrorDomain SDLiveServerErrorDomain;
+extern NSString* sdlive_sdk_version;
+
+typedef double SDLiveNumber;
 
 /**
  图片加载状态
@@ -30,6 +35,7 @@ typedef NS_ENUM(NSInteger, SDLiveConfig){
     SDLiveConfigDevelop,
     SDLiveConfigQA,
     SDLiveConfigProduct,
+    SDLiveConfigProductOfHushuo,
 };
 
 //服务器返回的code码
@@ -310,10 +316,6 @@ typedef NS_ENUM(NSInteger,SDLiveRoomPeopleEvent){
     SDLiveRoomPeopleEnterEvent = 1, //有人进入直播间
 } ;
 
-extern NSString* sdlive_sdk_version;
-
-typedef double SDLiveNumber;
-
 typedef NS_ENUM(NSInteger, SDLiveClientType){
     SDLiveClientAndroidType = 1,
     SDLiveClientIOSType = 2,
@@ -361,5 +363,14 @@ typedef enum :NSUInteger
     UrlSteamTypeShareVideo = 3,
 } UrlSteamType;
 
+//typedef enum :NSUInteger
+//{
+//} SDLiveDomainError;
+
+NS_ERROR_ENUM(SDLiveErrorDomain){
+    SDLiveErrorInvalidLoginParams = 1,
+    SDLiveErrorEmptyPlayRecordList = 2,
+    SDLiveErrorEmptyMediaPlayUrls = 3,
+};
 
 #endif /* SDLiveDefine_h */

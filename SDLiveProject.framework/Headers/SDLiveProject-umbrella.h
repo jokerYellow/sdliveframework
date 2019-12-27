@@ -28,6 +28,7 @@
 #import "SDLiveIMMessageModel.h"
 #import "SDLivePageContainerView.h"
 #import "SDLiveLog.h"
+#import "SDLiveEnvironment.h"
 
 FOUNDATION_EXPORT double SDLiveProjectVersionNumber;
 FOUNDATION_EXPORT const unsigned char SDLiveProjectVersionString[];
