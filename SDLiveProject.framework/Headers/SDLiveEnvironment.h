@@ -69,6 +69,16 @@
 //生产环境
 +(SDLiveEnvironment*)proEnv;
 +(SDLiveEnvironment*)proEnvOfHushuos;
+
+/**
+ 配置环境的便捷方法
+ 
+ @param liveHost 直播域名，如 live.hushuos.com
+ @param videoHost 点播域名，如 video.hushuos.com
+ @param imHost IM服务域名，如 liveim.hushuos.com
+ @return SDLiveEnvironment
+ */
++(SDLiveEnvironment*)customEnvWith:(NSString*)liveHost and:(NSString*)videoHost and:(NSString*)imHost;
 @end
 
 @interface SDLiveEnvironmentService:NSObject{
