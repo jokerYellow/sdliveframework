@@ -29,7 +29,6 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-  s.dependency 'YYModel'
   s.source_files = 'README.md', 'ChangeLog.md'
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
   s.exclude_files = 'docs/**/*' 
