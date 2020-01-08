@@ -29,7 +29,7 @@ pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git'
 pod 'SDLiveFramework',:git=>'https://github.com/jokerYellow/sdliveframework.git',:tag=>'1.1.3'
 ```
 
-> **如果主工程有引入欢拓**，请在安装尚直播之后测试欢拓功能是否正常，有问题请联系[尚直播技术人员 huangyaqing@sunlands.com](huangyaqing@sunlands.com)
+> **如果主工程有引入欢拓**，请在安装尚直播之后测试欢拓功能是否正常
 
 ## 3.使用方法
 
